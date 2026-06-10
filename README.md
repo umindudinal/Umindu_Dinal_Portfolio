@@ -1,10 +1,11 @@
 # 🚀 Umindu Dinal — Portfolio
 
-> A modern, animated personal portfolio website built with React 19, Tailwind CSS 4, and Framer Motion — showcasing projects, skills, experience, and contact information.
+> A modern, animated personal portfolio website built with React 19, Tailwind CSS 4, and Framer Motion — showcasing projects, skills, experience, and a working contact form powered by EmailJS.
 
 ![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-EF008F?style=for-the-badge&logo=framer&logoColor=white)
+![EmailJS](https://img.shields.io/badge/EmailJS-F7DF1E?style=for-the-badge&logo=gmail&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 
@@ -14,7 +15,7 @@
 
 ## 📖 About
 
-**Umindu Dinal's Portfolio** is a fully responsive single-page personal portfolio built with React 19, Tailwind CSS 4, Framer Motion animations, and deployed on GitHub Pages. It showcases 6 projects, 6 skill categories, 3 work experience entries, and a contact section with social media links.
+**Umindu Dinal's Portfolio** is a fully responsive single-page personal portfolio built with React 19, Tailwind CSS 4, Framer Motion animations, and deployed on GitHub Pages. It showcases 6 projects, 6 skill categories, 3 work experience entries, and a fully functional contact form that sends emails directly to the inbox via EmailJS — no backend required.
 
 ---
 
@@ -25,10 +26,10 @@
 - 🛠️ **Skills** — 6 skill category cards with tech tags
 - 💼 **Projects** — 6 project cards with description, tech stack, live demo and GitHub links
 - 🧑‍💼 **Experience** — 3 work/education timeline entries
-- 📬 **Contact** — Contact form + social media icons (GitHub, LinkedIn, Twitter, Dribbble)
+- 📬 **Contact Form** — Fully functional form (Name, Email, Message) — sends email via EmailJS with success/error feedback
 - 🌙 **Dark Theme** — Dark background with purple accent colors throughout
-- 🎞️ **Framer Motion** — Smooth page and component animations
-- 📱 **Responsive Design** — Mobile-friendly with hamburger navigation menu
+- 🎞️ **Framer Motion** — Smooth scroll-triggered animations on all sections
+- 📱 **Responsive Design** — Mobile-friendly with animated hamburger navigation menu
 - 🚀 **GitHub Pages** — Deployed via `gh-pages`
 
 ---
@@ -53,6 +54,7 @@
 | React | 19.2.0 | Component-based UI |
 | Tailwind CSS | 4.1.18 | Utility-first styling |
 | Framer Motion | 12.34.1 | Page & component animations |
+| EmailJS Browser | 4.4.1 | Contact form email service |
 | React Icons | 5.5.0 | Icon components |
 | React Router DOM | 7.13.0 | Client-side routing |
 | Vite | 7.3.1 | Build tool & dev server |
@@ -86,7 +88,7 @@ Umindu_Dinal_Portfolio/
     │   ├── Projects.jsx    # Projects grid section
     │   ├── ProjectCard.jsx # Reusable project card component
     │   ├── Work.jsx        # Work / Experience timeline
-    │   ├── Contact.jsx     # Contact form + social links
+    │   ├── Contact.jsx     # Contact form with EmailJS integration
     │   └── Footer.jsx      # Footer
     │
     └── assets/
@@ -143,8 +145,33 @@ Umindu_Dinal_Portfolio/
 
 5. **Open in browser**
    ```
-   http://localhost:5173
+   http://localhost:5173/Umindu_Dinal_Portfolio/
    ```
+
+---
+
+## 📧 EmailJS Setup (Contact Form)
+
+The contact form uses [EmailJS](https://www.emailjs.com/) to send emails without a backend.
+
+To configure it for your own use, update the following values in `src/components/Contact.jsx`:
+
+```js
+emailjs.sendForm(
+  'YOUR_SERVICE_ID',    // EmailJS → Email Services
+  'YOUR_TEMPLATE_ID',   // EmailJS → Email Templates
+  formRef.current,
+  'YOUR_PUBLIC_KEY'     // EmailJS → Account → General
+)
+```
+
+The email template uses these variables:
+
+| Template Variable | Form Input `name` |
+|-------------------|-------------------|
+| `{{name}}` | `name` |
+| `{{email}}` | `email` |
+| `{{message}}` | `message` |
 
 ---
 
@@ -153,6 +180,7 @@ Umindu_Dinal_Portfolio/
 Deployed to GitHub Pages via the `gh-pages` package:
 
 ```bash
+# Build and deploy to GitHub Pages
 npm run deploy
 ```
 
@@ -175,8 +203,9 @@ Live at: **[umindudinal.github.io/Umindu_Dinal_Portfolio](https://umindudinal.gi
 
 **Umindu Dinal**
 - Undergraduate — Information Technology, ITUM
-- GitHub: [@umindudinal](https://github.com/umindudinal)
-- Email: umindudinal@gmail.com
+- 📍 Medirigiriya, Polonnaruwa, Sri Lanka
+- 📧 umindudinal818@gmail.com
+- 📞 +94 77 964 8818
 
 ---
 
@@ -186,4 +215,4 @@ Copyright © 2025 Umindu Dinal. All Rights Reserved.
 
 ---
 
-<p align="center">Built with ❤️ using React & Framer Motion</p>
+<p align="center">Built with ❤️ using React, Framer Motion & EmailJS</p>
