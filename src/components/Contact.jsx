@@ -5,17 +5,17 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const formRef = useRef()
-  const [status, setStatus] = useState('')  // '', 'sending', 'success', 'error'
+  const [status, setStatus] = useState('')
 
   const sendEmail = (e) => {
     e.preventDefault()
     setStatus('sending')
 
     emailjs.sendForm(
-      'service_wlna5bw',   // ඔයාගේ Service ID
-      'template_792ufli',  // ඔයාගේ Template ID
+      'service_wlna5bw',
+      'template_792ufli',
       formRef.current,
-      '7gJwc38dTeVrBfaoY'     // ඔයාගේ Public Key
+      '7gJwc38dTeVrBfaoY'
     )
     .then(() => {
       setStatus('success')
@@ -78,10 +78,10 @@ const Contact = () => {
 
               {/* Status Messages */}
               {status === 'success' && (
-                <p className='text-green-400 text-sm'>✅ Message sent successfully!</p>
+                <p className='text-green-400 text-sm'>Message sent successfully!</p>
               )}
               {status === 'error' && (
-                <p className='text-red-400 text-sm'>❌ Something went wrong. Please try again.</p>
+                <p className='text-red-400 text-sm'>Something went wrong. Please try again.</p>
               )}
 
               <button
