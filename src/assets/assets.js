@@ -99,8 +99,8 @@ export const projects = [
     description: "A modern personal portfolio website featuring project showcases, animations, responsive design, and dark/light mode support.",
     image: projectImg2,
     tech: ["React 19", "Tailwind CSS 4", "Framer Motion", "Markdown"],
-    demo: "#",
-    code: "https://github.com/umindudinal/umindu-dinal-portfolio.git",
+    demo: "https://umindudinal.github.io/Umindu_Dinal_Portfolio/",
+    code: "https://github.com/umindudinal/Umindu_Dinal_Portfolio.git",
   },
   {
     title: "Multi-Category Fashion E-commerce Store",
