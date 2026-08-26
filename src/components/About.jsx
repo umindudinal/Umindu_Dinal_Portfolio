@@ -43,9 +43,9 @@ const About = () => {
               <img 
                 src={assets.aboutProfile} 
                 alt="Umindu Dinal" 
-                className='w-full h-[420px] object-cover rounded-2xl'
+                className='w-full h-auto rounded-2xl'
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-100/90 via-transparent to-transparent rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-100/80 via-transparent to-transparent rounded-2xl pointer-events-none" />
               
               {/* Floating Highlight Box */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border-white/10">
@@ -54,8 +54,8 @@ const About = () => {
                     <FaGraduationCap />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400 font-medium">HND in Information Technology</p>
-                    <p className="text-sm font-bold text-white">Institute of Technology Univ of Moratuwa</p>
+                    <p className="text-xs text-gray-400 font-medium">NDT in Information Technology</p>
+                    <p className="text-sm font-bold text-white">Institute of Technology University of Moratuwa ( ITUM )</p>
                   </div>
                 </div>
               </div>
@@ -94,13 +94,13 @@ const About = () => {
                 My Technical Background
               </h3>
               <p className='text-gray-300 leading-relaxed text-base'>
-                I am an Information Technology undergraduate at the <strong className="text-white">Institute of Technology, University of Moratuwa (ITUM)</strong>, specializing in software engineering, full-stack web architecture, backend services, and computer vision systems.
+                I am an IT Undergraduate at <strong className="text-white">ITUM (University of Moratuwa)</strong>, specializing in software engineering, full-stack web development, AI computer vision, and embedded systems.
               </p>
               <p className='text-gray-300 leading-relaxed text-base'>
-                My technical versatility spans multiple languages (<strong className="text-purple">Java, Python, C#, JavaScript, Dart, Go</strong>), frontend frameworks (<strong className="text-purple">React, Vue.js, Flutter, Tailwind CSS</strong>), and robust backends (<strong className="text-purple">Spring Boot, Gin, .NET, FastAPI</strong>) integrated with <strong className="text-purple">PostgreSQL, MySQL, and MongoDB</strong>.
+                My skill set covers building web & mobile apps with <strong className="text-purple">React 19, Flutter & Tailwind CSS</strong>, robust backend APIs using <strong className="text-purple">Spring Boot 3, Java 21, Node.js & MySQL</strong>, and C# .NET desktop software.
               </p>
               <p className='text-gray-300 leading-relaxed text-base'>
-                Beyond standard web development, I am passionate about computer vision and AI modeling (<strong className="text-purple">YOLOv8, OpenCV, Ultralytics</strong>), Docker containerization, and embedded systems simulation (<strong className="text-purple">Proteus</strong>).
+                I also engineer AI computer vision models (<strong className="text-purple">YOLOv8, OpenCV, TensorFlow</strong>) and embedded microcontroller automation (<strong className="text-purple">ATmega32, Embedded C & Proteus</strong>).
               </p>
             </div>
 

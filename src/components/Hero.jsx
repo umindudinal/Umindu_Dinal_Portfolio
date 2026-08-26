@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { assets, heroStats } from '../assets/assets'
-import { FaArrowRight, FaDownload, FaReact, FaServer, FaCode, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaArrowRight, FaDownload, FaReact, FaServer, FaCode, FaGithub, FaLinkedin, FaMicrochip } from 'react-icons/fa'
 
 const titles = [
-  "Full Stack Developer",
-  "React & Frontend Specialist",
-  "SpringBoot Backend Developer",
-  "ITUM IT Undergraduate"
+  "Full Stack & Systems Developer",
+  "AI & Computer Vision Engineer",
+  "Spring Boot & REST API Developer",
+  "Embedded IoT & Electronics Developer",
+  "ITUM Moratuwa Undergraduate"
 ];
 
 const Hero = () => {
@@ -83,7 +84,7 @@ const Hero = () => {
 
             {/* Introduction Bio */}
             <p className='text-gray-300 text-base md:text-lg mb-8 max-w-2xl leading-relaxed'>
-              IT Undergraduate at University of Moratuwa (ITUM). Passionate Full Stack Developer crafting modern, scalable web applications and intuitive digital experiences.
+              Information Technology Undergraduate at <strong className="text-white">ITUM (University of Moratuwa)</strong>. Specializing in Full-Stack Web Architecture, Spring Boot REST APIs, AI & Computer Vision, Desktop Software, and Embedded IoT Systems.
             </p>
 
             {/* CTA Buttons & Social Links */}
@@ -186,7 +187,7 @@ const Hero = () => {
               >
                 <FaReact className="text-cyan text-xl animate-spin-slow" />
                 <div>
-                  <p className="text-xs font-bold text-white">React 19</p>
+                  <p className="text-xs font-bold text-white">React 19 & Tailwind 4</p>
                   <p className="text-[10px] text-gray-400">Frontend Stack</p>
                 </div>
               </motion.div>
@@ -199,19 +200,22 @@ const Hero = () => {
               >
                 <FaServer className="text-emerald-400 text-lg" />
                 <div>
-                  <p className="text-xs font-bold text-white">SpringBoot 3</p>
-                  <p className="text-[10px] text-gray-400">Backend API</p>
+                  <p className="text-xs font-bold text-white">SpringBoot 3 & Java 21</p>
+                  <p className="text-[10px] text-gray-400">Backend REST API</p>
                 </div>
               </motion.div>
 
-              {/* Floating Badge 3: Clean Code */}
+              {/* Floating Badge 3: AI & Embedded IoT */}
               <motion.div 
                 animate={{ y: [-6, 6, -6] }}
                 transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-10 -left-6 glass-panel px-3.5 py-2 rounded-2xl flex items-center gap-2 shadow-xl border-purple/30 z-20"
+                className="absolute bottom-10 -left-6 glass-panel px-3.5 py-2.5 rounded-2xl flex items-center gap-2 shadow-xl border-purple/30 z-20"
               >
-                <FaCode className="text-purple text-base" />
-                <span className="text-xs font-semibold text-white">Tailwind CSS 4</span>
+                <FaMicrochip className="text-purple text-base" />
+                <div>
+                  <p className="text-xs font-bold text-white">AI Vision & Embedded IoT</p>
+                  <p className="text-[10px] text-gray-400">YOLOv8, OpenCV & ATmega32</p>
+                </div>
               </motion.div>
 
             </div>

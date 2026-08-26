@@ -60,9 +60,9 @@ const ProjectDetails = () => {
             Back to Projects
           </button>
           
-          {project.category && (
+          {(project.displayCategory || project.category) && (
             <span className="px-4 py-1.5 bg-purple/15 text-purple border border-purple/30 rounded-full text-xs font-semibold uppercase tracking-wider">
-              {project.category}
+              {project.displayCategory || (Array.isArray(project.category) ? project.category.join(' • ') : project.category)}
             </span>
           )}
         </div>
@@ -173,14 +173,16 @@ const ProjectDetails = () => {
               )}
 
               {/* Category */}
-              {project.category && (
+              {(project.displayCategory || project.category) && (
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-purple/10 flex items-center justify-center text-purple text-lg shrink-0">
                     <FaFolder />
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase font-semibold">Category</p>
-                    <p className="text-white font-medium">{project.category}</p>
+                    <p className="text-white font-medium">
+                      {project.displayCategory || (Array.isArray(project.category) ? project.category.join(' • ') : project.category)}
+                    </p>
                   </div>
                 </div>
               )}

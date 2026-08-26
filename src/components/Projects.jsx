@@ -9,7 +9,12 @@ const Projects = () => {
 
   const filteredProjects = activeCategory === 'all' 
     ? projects 
-    : projects.filter(project => project.category === activeCategory)
+    : projects.filter(project => {
+        if (Array.isArray(project.category)) {
+          return project.category.includes(activeCategory);
+        }
+        return project.category === activeCategory;
+      });
 
   return (
     <section 
@@ -27,12 +32,12 @@ const Projects = () => {
             Featured <span className='text-gradient'>Projects</span>
           </h2>
           <p className='text-gray-400 text-base sm:text-lg leading-relaxed'>
-            Explore my recent full-stack web applications, REST API backend services, and desktop software solutions. Click any project for full details.
+            Explore my recent full-stack web applications, REST API backend services, AI models, desktop software, and embedded IoT systems. Click any project for full details.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14 max-w-4xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-14 max-w-5xl mx-auto">
           {projectCategories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
@@ -41,8 +46,8 @@ const Projects = () => {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                   isActive 
-                    ? 'bg-gradient-to-r from-purple to-pink text-white shadow-lg shadow-purple/25 scale-105' 
-                    : 'glass-panel text-gray-300 hover:text-white hover:border-purple/40'
+                    ? 'bg-gradient-to-r from-purple to-pink text-white shadow-lg shadow-purple/30 scale-105 border border-purple/50' 
+                    : 'glass-panel text-gray-300 hover:text-white hover:border-purple/40 hover:bg-white/5'
                 }`}
               >
                 {cat.label}
@@ -54,9 +59,9 @@ const Projects = () => {
         {/* Projects Cards Grid */}
         <motion.div 
           layout
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch'
         >
-          <AnimatePresence>
+          <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
@@ -64,7 +69,8 @@ const Projects = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.3 }}
+                className='h-full flex flex-col'
               >
                 <ProjectCard {...project} />
               </motion.div>

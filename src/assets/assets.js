@@ -16,14 +16,15 @@ import {
 
 import profileImg from '../assets/profile.avif';
 import aboutProfile from '../assets/aboutprofile.avif';
-import projectImg1 from '../assets/project1.avif';
-import projectImg2 from '../assets/project2.avif';
-import projectImg3 from '../assets/project3.avif';
-import projectImg4 from '../assets/project4.avif';
-import projectImg5 from '../assets/project5.avif';
-import projectImg6 from '../assets/project6.avif';
+import projectImg12 from '../assets/project12.avif';
+import projectImg10 from '../assets/project10.avif';
+import projectImg11 from '../assets/project11.avif';
+import projectImg9 from '../assets/project9.avif';
+import projectImg7 from '../assets/project7.avif';
+import projectImg8 from '../assets/project8.avif';
+import projectImg13 from '../assets/project13.avif';
 import logo from '../assets/logo.avif';
-
+ 
 export const assets = {
   profileImg,
   aboutProfile,
@@ -31,7 +32,7 @@ export const assets = {
 };
 
 export const heroStats = [
-  { label: 'Projects Built', value: '6+', icon: FaRocket },
+  { label: 'Projects Built', value: '7+', icon: FaRocket },
   { label: 'Technologies', value: '15+', icon: FaCode },
   { label: 'Education', value: 'ITUM', icon: FaGraduationCap },
   { label: 'Code Quality', value: '100%', icon: FaShieldAlt },
@@ -40,26 +41,26 @@ export const heroStats = [
 export const aboutInfo = [
   {
     icon: FaLightbulb,
-    title: 'Innovative Software Solutions',
-    description: 'Engineering full-stack web applications, REST APIs, computer vision models, and intelligent systems.',
+    title: 'AI & Computer Vision',
+    description: 'Building AI plant disease detection and ANPR vehicle security systems using YOLOv8, OpenCV & TensorFlow.',
     color: 'text-purple'
   },
   {
     icon: FaPaintBrush,
-    title: 'UI/UX & Mobile Apps',
-    description: 'Designing responsive interfaces and mobile applications using React, Vue.js, Flutter, and Tailwind CSS.',
+    title: 'Frontend & Mobile Apps',
+    description: 'Designing responsive web & mobile applications using React 19, Flutter, and Tailwind CSS 4.',
     color: 'text-pink'
   },
   {
     icon: FaCode,
-    title: 'Robust Backends & APIs',
-    description: 'Building scalable microservices with Spring Boot, Gin, .NET, and FastAPI using PostgreSQL, MySQL & MongoDB.',
+    title: 'Backend APIs & Databases',
+    description: 'Engineering RESTful APIs and database backends using Spring Boot 3, Java 21, Node.js & MySQL.',
     color: 'text-blue'
   },
   {
     icon: FaShieldAlt,
-    title: 'Computer Vision & Embedded',
-    description: 'Developing AI vision models (YOLOv8, OpenCV), Docker containerization, and embedded simulations.',
+    title: 'Desktop & Embedded Systems',
+    description: 'Developing C# .NET desktop applications and ATmega32 microcontroller embedded automation.',
     color: 'text-emerald'
   }
 ];
@@ -68,206 +69,353 @@ export const skills = [
   {
     title: 'Programming Languages',
     icon: FaCode,
-    description: 'Core languages used for building web apps, backends, mobile apps, and intelligent systems.',
-    tags: ['Java', 'Python', 'C#', 'JavaScript', 'Dart', 'Go']
+    description: 'Core languages used for building web apps, backends, mobile apps, and embedded systems.',
+    tags: ['Java 21', 'Python', 'C#', 'JavaScript', 'Dart', 'Embedded C', 'PHP']
   },
   {
-    title: 'Frontend Development',
+    title: 'Frontend & Mobile',
     icon: FaReact,
-    description: 'Crafting responsive user interfaces, web applications, and mobile solutions.',
-    tags: ['React', 'Vue.js', 'Flutter', 'Tailwind CSS']
+    description: 'Crafting responsive user interfaces, mobile applications, and dynamic web portals.',
+    tags: ['React 19', 'Flutter', 'Tailwind CSS 4', 'Vite 7', 'Framer Motion', 'HTML5/CSS3']
   },
   {
     title: 'Backend & Frameworks',
     icon: FaServer,
-    description: 'Engineering robust server-side APIs, microservices, and high-performance backends.',
-    tags: ['Spring Boot', 'Gin', '.NET', 'FastAPI']
+    description: 'Engineering robust RESTful APIs, business logic layers, and server-side microservices.',
+    tags: ['Spring Boot 3', 'Spring Data JPA', 'Node.js', 'Express.js', '.NET Framework']
   },
   {
-    title: 'Databases',
+    title: 'Databases & Storage',
     icon: FaDatabase,
-    description: 'Designing, querying, and managing relational and document databases.',
-    tags: ['PostgreSQL', 'MySQL', 'MongoDB']
+    description: 'Designing, querying, and optimizing relational data structures and persistence layers.',
+    tags: ['MySQL', 'Microsoft SQL Server', 'SQLite', 'Hibernate', 'ADO.NET']
   },
   {
-    title: 'Tools, ML & Embedded',
+    title: 'AI, Tools & Embedded',
     icon: FaTools,
-    description: 'Containerization, computer vision models, machine learning, and embedded simulation.',
-    tags: ['Docker', 'Git', 'YOLOv8', 'OpenCV', 'Ultralytics', 'Proteus']
+    description: 'Computer vision detection models, OCR, embedded microcontroller simulation, and version control.',
+    tags: ['YOLOv8', 'OpenCV', 'EasyOCR', 'TensorFlow/Keras', 'ATmega32', 'Proteus', 'Git & GitHub']
   }
 ];
 
 export const projectCategories = [
   { id: 'all', label: 'All Projects' },
+  { id: 'AI & Mobile', label: 'AI & Mobile' },
   { id: 'Web Application', label: 'Web Apps' },
-  { id: 'E-Commerce', label: 'E-Commerce' },
   { id: 'Backend API', label: 'Backend APIs' },
   { id: 'Desktop Application', label: 'Desktop Software' },
-  { id: 'Web Portal', label: 'Web Portals' },
+  { id: 'Embedded & IoT', label: 'Embedded & IoT' },
 ];
 
 export const projects = [
   {
-    id: "go-ceylon",
-    title: "Tourist Web Application (GoCeylon)",
-    description: "A tourism web app providing information on attractions, accommodations, and travel guides for Sri Lanka, built with React and Tailwind CSS.",
-    longDescription: "GoCeylon is a comprehensive web-based platform tailored for travelers and tourists exploring Sri Lanka. The application provides detailed guides on top travel destinations, historical landmarks, accommodation recommendations, and cultural highlights. Designed with a modern user interface and fast navigation, it delivers a smooth experience across both desktop and mobile devices.",
-    image: projectImg1,
-    tech: ["JavaScript", "React 19", "Tailwind CSS 4", "Vite"],
-    category: "Web Application",
-    role: "Frontend Developer",
-    duration: "2025",
-    features: [
-      "Interactive destination guide with detailed location insights",
-      "Curated recommendations for hotels, restaurants, and tours",
-      "Fully responsive and touch-friendly layout built with Tailwind CSS",
-      "Fast page loading and seamless client-side routing"
+    id: "agricare-lk",
+    title: "AI Plant Disease Detection App (AgriCare LK)",
+    description: "An AI-powered mobile application that helps Sri Lankan farmers identify plant diseases from images and provides localized Sinhala treatment recommendations.",
+    longDescription: "AgriCare LK is a full-stack AI-powered mobile application designed to help Sri Lankan farmers quickly identify plant diseases using image-based diagnosis. The application allows users to capture or upload photos of affected plants and uses trained TensorFlow/Keras deep learning models to predict diseases in Tomato, Chili, and Brinjal crops. The system combines AI predictions with a SQL Server database to provide Sinhala-language symptoms, treatment recommendations, and agricultural guidance through an easy-to-use Flutter mobile interface.",
+    image: projectImg7,
+    tech: [
+      "Flutter",
+      "Dart",
+      "Node.js",
+      "Express.js",
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "OpenCV",
+      "Microsoft SQL Server"
     ],
-    highlights: "Designed and built an intuitive user experience for tourists navigating Sri Lankan attractions using React 19 and Tailwind CSS 4.",
-    demo: "https://umindudinal.github.io/GoCeylon/",
-    code: "https://github.com/umindudinal/GoCeylon.git"
+    category: ["AI & Mobile", "Backend API"],
+    displayCategory: "AI Mobile Application",
+    role: "Full-Stack Developer",
+    duration: "2026",
+    features: [
+      "AI-powered plant disease detection from captured or uploaded images",
+      "Disease classification for Tomato, Chili, and Brinjal crops",
+      "Confidence score for AI-based disease predictions",
+      "Sinhala-language symptoms and treatment recommendations",
+      "Agricultural tips and disease information for farmers",
+      "REST API connecting the Flutter app, AI models, and database",
+      "SQL Server database for disease and treatment information",
+      "Modern and user-friendly Flutter mobile interface"
+    ],
+    highlights: "Developed a complete AI-powered agriculture solution by integrating Flutter, Node.js, Python, TensorFlow/Keras, and SQL Server to provide image-based plant disease detection and localized Sinhala treatment guidance for Sri Lankan farmers.",
+    demo: "",
+    code: "https://github.com/umindudinal/AgriCare-LK.git"
   },
   {
-    id: "developer-portfolio",
-    title: "Modern Full-Stack Developer Portfolio",
-    description: "A modern personal portfolio website featuring project showcases, animations, responsive design, and dark/light mode support.",
-    longDescription: "A high-performance personal developer portfolio built with React 19, Framer Motion, and Tailwind CSS. The website highlights key projects, technical skills, professional work experience, and contact forms with fluid animations, custom glassmorphic components, and individual project deep-dives.",
-    image: projectImg2,
-    tech: ["React 19", "Tailwind CSS 4", "Framer Motion", "React Router 7"],
-    category: "Web Application",
-    role: "Full Stack Developer",
-    duration: "2025 - Present",
-    features: [
-      "Dynamic project showcases with detailed dedicated page views",
-      "Smooth micro-interactions powered by Framer Motion",
-      "Integrated EmailJS contact form for direct inquiries",
-      "Optimized for SEO, accessibility, and high performance"
+    id: "automated-gate-anpr",
+    title: "Automated Gate ANPR Security & Access Control System",
+    description: "An AI-powered automated gate security system that detects vehicles, recognizes Sri Lankan license plates, and manages entry and exit events using computer vision and OCR.",
+    longDescription: "The Automated Gate ANPR Security & Access Control System is an end-to-end computer vision solution designed to automate vehicle identification and gate access management. The system uses YOLOv8 for real-time vehicle and license plate detection, EasyOCR for number plate recognition, and specialized processing for Sri Lankan license plate formats. It automatically identifies vehicle entry and exit based on yellow rear and white front plates, records access events, tracks active sessions, and provides both a desktop monitoring interface and a web-based dashboard.",
+    image: projectImg8,
+    tech: [
+      "Python",
+      "YOLOv8",
+      "EasyOCR",
+      "OpenCV",
+      "CustomTkinter",
+      "Streamlit",
+      "MySQL",
+      "SQLite",
+      "Pandas",
+      "NumPy"
     ],
-    highlights: "Leveraged modern React 19 standards and component architecture to showcase real-world projects and technical capabilities.",
-    demo: "https://umindudinal.github.io/Umindu_Dinal_Portfolio/",
-    code: "https://github.com/umindudinal/Umindu_Dinal_Portfolio.git",
-  },
-  {
-    id: "fashion-ecommerce",
-    title: "Multi-Category Fashion E-commerce Store",
-    description: "An e-commerce platform supporting multiple product categories, secure payments, shopping cart, and user authentication.",
-    longDescription: "An end-to-end multi-category fashion e-commerce storefront designed for seamless online shopping. Users can browse products by category, apply filters, manage cart items, and simulate checkout processes with an intuitive and responsive design.",
-    image: projectImg4,
-    tech: ["React 19", "CSS 3", "React Router 7", "Vite"],
-    category: "E-Commerce",
-    role: "Frontend Developer",
-    duration: "2024",
+    category: ["AI & Mobile", "Desktop Application"],
+    displayCategory: "AI & Security System",
+    role: "AI / Full-Stack Developer",
+    duration: "2026",
     features: [
-      "Multi-category product catalog with price & category filter options",
-      "Interactive shopping cart state management",
-      "Responsive hero banner, product showcases, and footer navigation",
-      "Clean client-side routing for product collections"
+      "Real-time vehicle and license plate detection using YOLOv8",
+      "Automatic license plate recognition using EasyOCR",
+      "Sri Lankan license plate format validation and OCR error correction",
+      "Automatic entry and exit detection using plate color analysis",
+      "Smart voting and cooldown system to reduce incorrect and duplicate detections",
+      "Vehicle type classification including cars, vans, bikes, buses, and trucks",
+      "Live vehicle session tracking with stay duration calculation",
+      "MySQL, SQLite, and CSV-based event logging",
+      "Desktop monitoring interface built with CustomTkinter",
+      "Web-based monitoring dashboard built with Streamlit",
+      "Timestamped license plate snapshots for audit and manual verification"
     ],
-    highlights: "Implemented efficient client-side state handling and route navigation for seamless shopping experiences.",
-    demo: "https://umindudinal.github.io/e-commerce-website/",
-    code: "https://github.com/umindudinal/e-commerce-website.git",
-  },
-  {
-    id: "campus-event-portal",
-    title: "Campus Event Planning & Management Portal",
-    description: "A university event management system for creating, scheduling, and managing events with registrations and notifications.",
-    longDescription: "A web-based event planning and management portal built for university campuses. The system enables students and faculty to register for upcoming events, view schedules, manage event proposals, and maintain user accounts with MySQL database backend.",
-    image: projectImg5,
-    tech: ["HTML 5", "CSS 3", "JavaScript", "PHP", "MySQL"],
-    category: "Web Portal",
-    role: "Full Stack Developer",
-    duration: "2024",
-    features: [
-      "Student and administrator authentication system",
-      "Event creation, editing, and scheduling dashboard",
-      "Participant registration and capacity tracking",
-      "MySQL database backend with secure queries"
-    ],
-    highlights: "Engineered complete CRUD operations and session-based authentication for campus-wide event coordination.",
-    code: "https://github.com/umindudinal/Web_Technology_CA.git",
+    highlights: "Built an intelligent ANPR-based security solution that combines YOLOv8, EasyOCR, OpenCV, and database logging to automate vehicle identification, entry/exit tracking, and gate security management for Sri Lankan environments.",
+    demo: "",
+    code: "https://github.com/umindudinal/Automated-Gate-ANPR-Security-Access-Control-System.git"
   },
   {
     id: "ecommerce-backend",
-    title: "E-Commerce Backend System using SpringBoot",
-    description: "A robust backend system for managing e-commerce operations with secure APIs and database integration.",
-    longDescription: "An enterprise-grade backend service built with Spring Boot 3.5 and Java 21. It provides restful REST API endpoints for product management, user authentication, cart management, order processing, and persistent database storage with MySQL.",
-    image: projectImg6,
-    tech: ["SpringBoot 3.5.6", "Java 21", "MySQL", "Maven"],
-    category: "Backend API",
+    title: "E-Commerce Backend System",
+    description: "A RESTful e-commerce backend API built with Spring Boot, providing user management, product management, shopping cart functionality, and order checkout using MySQL.",
+    longDescription: "The E-Commerce Backend System is a scalable RESTful API developed with Spring Boot for managing the core backend operations of an online shopping platform. The system provides APIs for user management, product catalog management, shopping carts, and order processing. It follows a layered architecture using Controllers, Services, Repositories, and Models, with Spring Data JPA and Hibernate handling database operations. The application also includes request validation, custom exception handling, stock tracking, cart management, and order checkout functionality.",
+    image: projectImg9,
+    tech: [
+      "Java 21",
+      "Spring Boot 3",
+      "Spring Web",
+      "Spring Data JPA",
+      "Hibernate",
+      "MySQL",
+      "Maven",
+      "Lombok"
+    ],
+    category: ["Backend API"],
+    displayCategory: "Backend REST API",
     role: "Backend Developer",
     duration: "2025",
     features: [
-      "RESTful API architecture following clean code principles",
-      "Entity relationship mapping (ORM) with Spring Data JPA & MySQL",
-      "Custom exception handling and input validation",
-      "Scalable service layer design for high throughput"
+      "RESTful API for complete e-commerce backend operations",
+      "User account creation, retrieval, and deletion with email validation",
+      "Product management with stock quantity tracking",
+      "Shopping cart management with add, view, and remove operations",
+      "Order checkout system with automatic order and order-item creation",
+      "Order history retrieval for users",
+      "Request validation using Spring Validation",
+      "Custom exception handling for missing resources",
+      "Layered architecture using Controller, Service, Repository, and Model layers",
+      "MySQL database integration using Spring Data JPA and Hibernate",
+      "Automatic database table creation and updates with Hibernate"
     ],
-    highlights: "Built robust REST services leveraging Spring Boot 3 standards and Java 21 features.",
-    code: "https://github.com/umindudinal/E-Commerce-Backend-System-using-Spring-Boot.git",
+    highlights: "Designed and developed a complete e-commerce backend using Spring Boot 3, Java 21, Spring Data JPA, and MySQL, implementing RESTful APIs, business logic, database relationships, validation, cart management, and order processing.",
+    demo: "",
+    code: "https://github.com/umindudinal/E-Commerce-Backend-System-using-Spring-Boot.git"
   },
   {
-    id: "library-management",
-    title: "Library Management Desktop Application using C#",
-    description: "A desktop application for managing library operations, including book inventory, user management, and borrowing processes.",
-    longDescription: "A Windows Forms desktop application developed in C# and .NET Framework for automated library management. The solution allows librarians to keep track of book inventory, manage borrower profiles, issue & return books, and calculate due fees.",
-    image: projectImg3,
-    tech: ["C#", ".NET Framework", "SQL Server", "Windows Forms"],
-    category: "Desktop Application",
-    role: "Software Developer",
-    duration: "2024",
-    features: [
-      "Book catalog search and status tracking (available/borrowed)",
-      "Member management with record of active loans and history",
-      "Automatic late fee computation and automated receipts",
-      "Relational SQL Server database for reliable record keeping"
+    id: "library-management-system",
+    title: "Library Management System (Sarasavi Library System)",
+    description: "A Windows desktop library management application built with C# Windows Forms and SQL Server for managing books, users, loans, returns, reservations, and catalogue inquiries.",
+    longDescription: "Sarasavi Library System is a desktop-based Library Management System designed to digitize and streamline day-to-day library operations. The application provides a secure login system and a centralized dashboard for managing book registration, user registration, book loans, returns, reservations, and catalogue inquiries. Built with C# Windows Forms and SQL Server Express, the system uses ADO.NET for database communication and implements business rules such as loan limits, reference-copy restrictions, automatic return dates, reservation handling, and automated book and user number generation.",
+    image: projectImg10,
+    tech: [
+      "C#",
+      ".NET Framework 4.7.2",
+      "Windows Forms",
+      "SQL Server Express",
+      "ADO.NET",
+      "Visual Studio 2022"
     ],
-    highlights: "Delivered a user-friendly desktop GUI with multi-table SQL backend integration for library administration.",
-    code: "https://github.com/umindudinal/Library-Management-System-using-C-.git",
+    category: ["Desktop Application"],
+    displayCategory: "Desktop Application",
+    role: "Full-Stack Developer",
+    duration: "2025",
+    features: [
+      "Secure username and password authentication",
+      "Centralized dashboard for accessing all library modules",
+      "Book registration with automatic book number generation",
+      "Book copy management with Borrowable and Reference classifications",
+      "Member and visitor registration with automatic user number generation",
+      "Book loan management with automatic 14-day return period",
+      "Book return processing with reservation alerts",
+      "Book reservation system for registered members",
+      "Catalogue search by book number, title, or author",
+      "Real-time availability status including Available, On Loan, and Reserved",
+      "SQL Server database integration using ADO.NET",
+      "Business-rule validation for borrowing and reservation operations"
+    ],
+    highlights: "Designed and developed a complete desktop-based library management solution using C# Windows Forms and SQL Server, implementing secure authentication, book and user management, loan and return workflows, reservations, catalogue search, and database-driven business logic.",
+    demo: "",
+    code: "https://github.com/umindudinal/Library-Management-System-using-C-Sharp.git"
   },
+  {
+    id: "student-event-management",
+    title: "ITUM Student Event Management System",
+    description: "A full-stack web application that enables ITUM students to discover and register for campus events while providing administrators with tools to manage events, users, and registrations.",
+    longDescription: "The ITUM Student Event Management System is a web-based platform developed to simplify the management of university events and student registrations. Students can create accounts, browse upcoming events, view event details, and register using unique event codes. Administrators have access to a role-based dashboard where they can create, update, and delete events, upload event images, manage student accounts, and monitor all event registrations. The system uses PHP sessions and prepared statements for backend processing with MySQL as the database.",
+    image: projectImg11,
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "Font Awesome",
+      "XAMPP"
+    ],
+    category: ["Web Application"],
+    displayCategory: "Web Portal & App",
+    role: "Full-Stack Developer",
+    duration: "2025",
+    features: [
+      "Student registration and session-based login system",
+      "Browse upcoming and available campus events",
+      "Event registration using unique event codes",
+      "Duplicate event registration prevention",
+      "Personal student profile management",
+      "Role-based admin dashboard",
+      "Create, edit, and delete events",
+      "Event image upload and management",
+      "Student and admin user management",
+      "View and manage all event registrations",
+      "Responsive user interface for different screen sizes",
+      "MySQL database with structured event, user, and registration tables",
+      "Secure password hashing and prepared SQL statements"
+    ],
+    highlights: "Designed and developed a complete university event management platform with student authentication, event registration, role-based administration, image management, and MySQL database integration using PHP, JavaScript, HTML5, and CSS3.",
+    demo: "",
+    code: "https://github.com/umindudinal/Student-Event-Management-System-ITUM.git"
+  },
+  {
+    id: "smart-home-automation",
+    title: "Smart Home Automation System",
+    description: "An embedded smart home automation system built with an ATmega32 microcontroller that automatically controls temperature, lighting, and gas safety using real-time sensor data.",
+    longDescription: "Smart Home Automation System is an embedded automation project developed using Embedded C and an ATmega32 AVR microcontroller. The system continuously monitors temperature, ambient light, and smoke/gas levels through analog sensors and automatically controls a fan, heater, lamp, and safety buzzer according to predefined conditions. A 16x2 LCD provides real-time temperature and system-status feedback, while the complete circuit can be designed and tested using Proteus simulation before physical deployment.",
+    image: projectImg13,
+    tech: [
+      "Embedded C",
+      "ATmega32",
+      "AVR-GCC",
+      "Atmel Studio 7",
+      "Proteus Design Suite",
+      "ADC",
+      "LDR Sensor",
+      "Smoke/Gas Sensor",
+      "Relay Module",
+      "16x2 LCD"
+    ],
+    category: ["Embedded & IoT"],
+    displayCategory: "Embedded & IoT",
+    role: "Embedded Systems Developer",
+    duration: "2026",
+    features: [
+      "Automatic temperature monitoring and control",
+      "Fan activation when temperature exceeds the defined threshold",
+      "Automatic heater control for low-temperature conditions",
+      "LDR-based automatic lighting control",
+      "Real-time smoke and gas detection with safety alarm",
+      "Live temperature and system-status display on a 16x2 LCD",
+      "ADC-based analog sensor data acquisition",
+      "Four relay-controlled outputs for heater, fan, lamp, and buzzer",
+      "Fully autonomous control loop without manual intervention",
+      "Complete Proteus circuit simulation for testing and validation",
+      "Configurable temperature, light, and smoke threshold values"
+    ],
+    highlights: "Designed and developed an autonomous embedded home automation controller using ATmega32 and Embedded C, integrating temperature, light, and gas sensors with relay-controlled appliances and real-time LCD monitoring.",
+    demo: "",
+    code: "https://github.com/umindudinal/Smart-Home-Automation-System.git"
+  },
+  {
+    id: "go-ceylon",
+    title: "Tourist Web Application (GoCeylon)",
+    description: "A modern and responsive Sri Lanka tourism web application that helps travelers explore destinations, tour packages, and travel services through an engaging and user-friendly interface.",
+    longDescription: "GoCeylon is a modern front-end tourism platform designed to showcase the beauty of Sri Lanka and help travelers discover popular destinations, curated tour packages, and travel services. The application features an immersive hero section, destination highlights, detailed tour packages, trust-building features, smooth navigation, and scroll-based animations. Built with React 19, Tailwind CSS 4, and Vite, the application delivers a fast, responsive, and visually engaging experience across desktop and mobile devices.",
+    image: projectImg12,
+    tech: [
+      "JavaScript",
+      "React 19",
+      "Tailwind CSS 4",
+      "Vite 7",
+      "AOS",
+      "React Icons",
+      "React Router DOM 7",
+      "React Scroll",
+      "GitHub Pages"
+    ],
+    category: ["Web Application"],
+    displayCategory: "Web Application",
+    role: "Frontend Developer",
+    duration: "2025",
+    features: [
+      "Full-screen hero section with travel-focused call-to-action",
+      "Popular Sri Lankan destinations including Sigiriya, Kandy, Ella, Yala, and Mirissa",
+      "Curated tour packages with duration, group size, pricing, and descriptions",
+      "Responsive mobile-friendly navigation with hamburger menu",
+      "Smooth scrolling navigation between website sections",
+      "Scroll-triggered animations using AOS",
+      "Professional local guides, certified agency, and 24/7 support highlights",
+      "Modern responsive UI built with Tailwind CSS 4",
+      "Component-based architecture using React",
+      "Fast development and production builds using Vite",
+      "Deployed and hosted using GitHub Pages"
+    ],
+    highlights: "Designed and developed a modern Sri Lankan tourism experience using React 19 and Tailwind CSS 4, combining responsive UI, destination discovery, tour packages, smooth navigation, and engaging scroll animations.",
+    demo: "https://umindudinal.github.io/GoCeylon/",
+    code: "https://github.com/umindudinal/GoCeylon.git"
+  }
 ];
 
 export const workData = [
   {
-    role: "Higher National Diploma in Information Technology",
+    role: "NDT in Information Technology",
     company: "Institute of Technology University of Moratuwa (ITUM)",
     duration: "2025 - Present",
     category: "Education",
     location: "Diyagama, Sri Lanka",
-    description: "Specializing in Software Engineering, Web Architecture, Database Systems, and Object-Oriented Software Design.",
+    description: "Specializing in Software Engineering, Web Architecture, Database Systems, Computer Vision, and Embedded Systems.",
     achievements: [
-      "Core coursework in Data Structures, Algorithms, OOP (Java & C#), and Relational Databases",
-      "Hands-on full stack project development utilizing modern frameworks and database tools"
+      "Comprehensive coursework in Data Structures, Algorithms, OOP (Java & C#), Relational Databases, and Microcontroller Systems",
+      "Hands-on full-stack development, AI computer vision modeling, and embedded hardware simulation"
     ],
-    skills: ["Java", "C#", "SQL", "Software Engineering", "Web Architecture"],
+    skills: ["Java", "C#", "Python", "SQL", "Software Engineering", "Embedded Systems"],
     color: "purple"
   },
   {
-    role: "Full Stack & Systems Developer",
-    company: "Freelance & Independent Projects",
-    duration: "2024 - Present",
+    role: "AI & Full-Stack Developer",
+    company: "Freelance & Independent Engineering Projects",
+    duration: "2025 - Present",
     category: "Experience",
-    location: "Remote / Freelance",
-    description: "Designing and engineering full-stack web applications, REST APIs, and software solutions for clients and academic portfolios.",
+    location: "Remote / Independent",
+    description: "Architecting intelligent mobile & web applications, deep learning computer vision systems, and modern user interfaces.",
     achievements: [
-      "Engineered GoCeylon Tourism Platform and Fashion E-Commerce Web Store",
-      "Developed Spring Boot 3 & Java 21 REST API E-Commerce Backend",
-      "Built Computer Vision and Embedded prototypes using Python, OpenCV, & Proteus"
+      "Engineered AgriCare LK (AI Plant Disease Detection Mobile App) using Flutter, Node.js, TensorFlow, and SQL Server",
+      "Developed Automated Gate ANPR Security System using YOLOv8, EasyOCR, OpenCV, and CustomTkinter",
+      "Built GoCeylon Tourism Web Application using React 19, Tailwind CSS 4, and Vite"
     ],
-    skills: ["React", "Spring Boot", "Python", "Tailwind CSS", "MySQL", "Docker"],
+    skills: ["Flutter", "Python", "React 19", "YOLOv8", "TensorFlow", "OpenCV", "Node.js"],
     color: "pink"
   },
   {
-    role: "Software & Desktop Application Developer",
-    company: "Academic & Systems Projects",
+    role: "Backend & Systems Software Developer",
+    company: "Academic & Systems Development Projects",
     duration: "2024 - 2025",
     category: "Experience",
-    location: "University Projects",
-    description: "Built automated desktop software solutions and administrative database management applications.",
+    location: "University & Independent Projects",
+    description: "Developing scalable RESTful APIs, relational database systems, desktop management software, and embedded automation controllers.",
     achievements: [
-      "Developed Windows Forms Library Management Desktop App in C# & SQL Server",
-      "Automated inventory tracking, user profile management, and fee calculations"
+      "Designed E-Commerce Backend REST API utilizing Java 21, Spring Boot 3, Spring Data JPA, and MySQL",
+      "Built Sarasavi Library Management Desktop System using C# Windows Forms and SQL Server",
+      "Engineered ITUM Student Event Management Web Platform using PHP, JavaScript, and MySQL",
+      "Designed ATmega32 Smart Home Automation System using Embedded C and Proteus circuit simulation"
     ],
-    skills: ["C#", ".NET Framework", "SQL Server", "Windows Forms"],
+    skills: ["Spring Boot 3", "Java 21", "C# .NET", "PHP", "MySQL", "SQL Server", "Embedded C"],
     color: "blue"
   }
 ];

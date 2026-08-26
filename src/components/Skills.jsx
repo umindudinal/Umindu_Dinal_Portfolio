@@ -6,67 +6,66 @@ import {
   FaPython,
   FaJs, 
   FaGitAlt, 
-  FaDocker,
-  FaVuejs,
   FaBrain,
-  FaEye,
   FaMicrochip,
-  FaRobot
+  FaPhp,
+  FaHtml5,
+  FaNodeJs,
+  FaDatabase
 } from 'react-icons/fa'
 import { 
   SiSpringboot, 
   SiTailwindcss, 
   SiMysql, 
   SiDotnet, 
-  SiMongodb,
-  SiPostgresql,
   SiFlutter,
-  SiFastapi,
-  SiGo
+  SiTensorflow,
+  SiOpencv,
+  SiVite
 } from 'react-icons/si'
 
 const techStack = [
   // Languages
-  { name: 'Java', category: 'Languages', icon: FaJava, color: 'text-amber-400', level: 'Core' },
+  { name: 'Java 21', category: 'Languages', icon: FaJava, color: 'text-amber-400', level: 'Core' },
   { name: 'Python', category: 'Languages', icon: FaPython, color: 'text-blue-400', level: 'Core' },
   { name: 'C#', category: 'Languages', icon: SiDotnet, color: 'text-purple-400', level: 'Core' },
   { name: 'JavaScript', category: 'Languages', icon: FaJs, color: 'text-yellow-400', level: 'Core' },
   { name: 'Dart', category: 'Languages', icon: SiFlutter, color: 'text-sky-400', level: 'Core' },
-  { name: 'Go', category: 'Languages', icon: SiGo, color: 'text-cyan-400', level: 'Core' },
+  { name: 'Embedded C', category: 'Languages', icon: FaMicrochip, color: 'text-rose-400', level: 'Embedded' },
+  { name: 'PHP', category: 'Languages', icon: FaPhp, color: 'text-indigo-400', level: 'Core' },
 
-  // Frontend
-  { name: 'React', category: 'Frontend', icon: FaReact, color: 'text-cyan-400', level: 'Frontend' },
-  { name: 'Vue.js', category: 'Frontend', icon: FaVuejs, color: 'text-emerald-400', level: 'Frontend' },
+  // Frontend & Mobile
+  { name: 'React 19', category: 'Frontend', icon: FaReact, color: 'text-cyan-400', level: 'Frontend' },
   { name: 'Flutter', category: 'Frontend', icon: SiFlutter, color: 'text-sky-400', level: 'Mobile UI' },
-  { name: 'Tailwind CSS', category: 'Frontend', icon: SiTailwindcss, color: 'text-sky-400', level: 'CSS' },
+  { name: 'Tailwind CSS 4', category: 'Frontend', icon: SiTailwindcss, color: 'text-sky-400', level: 'Styling' },
+  { name: 'HTML5 & CSS3', category: 'Frontend', icon: FaHtml5, color: 'text-orange-400', level: 'Web UI' },
+  { name: 'Vite 7', category: 'Frontend', icon: SiVite, color: 'text-purple-400', level: 'Build Tool' },
 
   // Backend & Frameworks
-  { name: 'Spring Boot', category: 'Backend', icon: SiSpringboot, color: 'text-emerald-400', level: 'Backend' },
-  { name: 'Gin', category: 'Backend', icon: SiGo, color: 'text-cyan-400', level: 'Backend' },
-  { name: '.NET', category: 'Backend', icon: SiDotnet, color: 'text-purple-400', level: 'Framework' },
-  { name: 'FastAPI', category: 'Backend', icon: SiFastapi, color: 'text-teal-400', level: 'Backend' },
+  { name: 'Spring Boot 3', category: 'Backend', icon: SiSpringboot, color: 'text-emerald-400', level: 'Backend API' },
+  { name: 'Node.js & Express', category: 'Backend', icon: FaNodeJs, color: 'text-emerald-500', level: 'REST API' },
+  { name: '.NET Framework', category: 'Backend', icon: SiDotnet, color: 'text-purple-400', level: 'Desktop & Web' },
 
   // Databases
-  { name: 'PostgreSQL', category: 'Databases', icon: SiPostgresql, color: 'text-blue-400', level: 'Database' },
-  { name: 'MySQL', category: 'Databases', icon: SiMysql, color: 'text-sky-500', level: 'Database' },
-  { name: 'MongoDB', category: 'Databases', icon: SiMongodb, color: 'text-emerald-500', level: 'Database' },
+  { name: 'MySQL', category: 'Databases', icon: SiMysql, color: 'text-sky-500', level: 'RDBMS' },
+  { name: 'MS SQL Server', category: 'Databases', icon: FaDatabase, color: 'text-red-400', level: 'RDBMS' },
+  { name: 'SQLite', category: 'Databases', icon: FaDatabase, color: 'text-blue-300', level: 'Embedded DB' },
 
-  // Tools, ML & Embedded
-  { name: 'Docker', category: 'Tools & ML', icon: FaDocker, color: 'text-blue-400', level: 'DevOps' },
-  { name: 'Git', category: 'Tools & ML', icon: FaGitAlt, color: 'text-orange-500', level: 'VCS' },
+  // AI, Tools & Embedded
   { name: 'YOLOv8', category: 'Tools & ML', icon: FaBrain, color: 'text-pink-400', level: 'Vision ML' },
-  { name: 'OpenCV', category: 'Tools & ML', icon: FaEye, color: 'text-red-400', level: 'Vision' },
-  { name: 'Ultralytics', category: 'Tools & ML', icon: FaRobot, color: 'text-indigo-400', level: 'AI Framework' },
-  { name: 'Proteus', category: 'Tools & ML', icon: FaMicrochip, color: 'text-yellow-500', level: 'Embedded' },
+  { name: 'OpenCV', category: 'Tools & ML', icon: SiOpencv, color: 'text-red-400', level: 'Computer Vision' },
+  { name: 'TensorFlow', category: 'Tools & ML', icon: SiTensorflow, color: 'text-orange-500', level: 'Deep Learning' },
+  { name: 'ATmega32 & Proteus', category: 'Tools & ML', icon: FaMicrochip, color: 'text-yellow-500', level: 'Embedded IoT' },
+  { name: 'Git & GitHub', category: 'Tools & ML', icon: FaGitAlt, color: 'text-orange-500', level: 'VCS' },
 ];
 
 const categories = [
   { id: 'all', label: 'All Tech' },
   { id: 'Languages', label: 'Languages' },
-  { id: 'Frontend', label: 'Frontend' },
-  { id: 'Backend', label: 'Backend & Frameworks' },
+  { id: 'Frontend', label: 'Frontend & Mobile' },
+  { id: 'Backend', label: 'Backend & APIs' },
   { id: 'Databases', label: 'Databases' },
-  { id: 'Tools & ML', label: 'Tools, ML & Embedded' },
+  { id: 'Tools & ML', label: 'AI, Tools & Embedded' },
 ];
 
 const Skills = () => {
@@ -92,7 +91,7 @@ const Skills = () => {
             Skills & <span className='text-gradient'>Technologies</span>
           </h2>
           <p className='text-gray-400 text-base sm:text-lg leading-relaxed'>
-            A comprehensive overview of programming languages, frameworks, databases, and development tools I work with.
+            A comprehensive overview of programming languages, frameworks, databases, and engineering tools I use to build real-world applications.
           </p>
         </div>
 
@@ -121,7 +120,7 @@ const Skills = () => {
           layout
           className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'
         >
-          <AnimatePresence>
+          <AnimatePresence mode='popLayout'>
             {filteredTech.map((tech) => {
               const IconComp = tech.icon;
               return (
