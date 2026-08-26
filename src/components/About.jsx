@@ -1,72 +1,136 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { aboutInfo, assets } from '../assets/assets'
+import { FaGraduationCap, FaCode, FaLaptopCode, FaCheck, FaUser, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa'
 
 const About = () => {
-   return (
-      <>
-      <motion.div
-      initial={{opacity:0, y:50}}
-      whileInView={{opacity:1, y:0}}
-      transition={{duration:0.6, ease:'easeOut'}}
-      viewport={{once:true}}
+  return (
+    <section 
       id='about'
-      className='py-20 bg-dark-200'>
+      className='py-24 bg-dark-200 relative overflow-hidden'
+    >
+      {/* Background Glow */}
+      <div className="absolute top-1/3 left-0 w-96 h-96 bg-purple/10 rounded-full blur-3xl pointer-events-none" />
 
-         <div className='container mx-auto px-6'>
-            {/* Heading */}
-            <h2 className='text-3xl font-bold text-center mb-4'>About <span className='text-purple'>Me</span></h2>
-            <p className='text-gray-400 text-center max-w-2xl mx-auto mb-16'>I'm a passionate developer with expertise in building modern web applications using React, Next.js, and other cutting-edge technologies.</p>
+      <div className='container mx-auto px-6 relative z-10'>
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="px-4 py-1.5 rounded-full glass-panel border-purple/30 text-purple text-xs font-semibold uppercase tracking-wider mb-3 inline-block">
+            Get To Know Me
+          </span>
+          <h2 className='text-3xl sm:text-4xl font-extrabold text-white mb-4'>
+            About <span className='text-gradient'>Me</span>
+          </h2>
+          <p className='text-gray-400 text-base sm:text-lg leading-relaxed'>
+            Passionate IT Undergraduate & Multi-Disciplinary Software Developer committed to crafting scalable web systems, APIs, mobile apps, and intelligent solutions.
+          </p>
+        </div>
 
-            {/* Content */}
-            <div className='flex flex-col md:flex-row items-center gap-12'>
-               {/* Image content */}
-               <div className='md:w-1/2 rounded-2xl overflow-hidden'>
-                  <motion.img 
-                  initial={{opacity:0, y:50}}
-                  whileInView={{opacity:1, y:0}}
-                  transition={{duration:0.9, ease:'easeOut'}}
-                  viewport={{once:false, amount:0.2}}
-                  className='w-full h-full object-cover'
-                  src={assets.aboutProfile} alt="" />
-               </div>
-
-               {/* Text content */}
-               <motion.div
-               initial={{opacity:0, y:50}}
-               whileInView={{opacity:1, y:0}}
-               transition={{duration:0.9, ease:'easeOut'}}
-               viewport={{once:false, amount:0.2}}
-               className='md:w-1/2'>
-
-                  <div className='rounded-2xl p-8'>
-                     <h3 className='text-2xl font-semibold mb-6'>My Journey</h3>
-                     <p className='text-gray-300'>I am a Full Stack Web Developer with over 5 years of experience specializing in React and Next.js. I build responsive, user-friendly web applications with clean code and scalable architecture, focusing on creating exceptional user experiences.</p><br />
-                     <p className='text-gray-300'>I enjoy solving complex problems, optimizing performance, and continuously learning new technologies. My goal is to develop high-quality, meaningful web products that delight users and make a real impact in the digital space.</p>
+        {/* Content 2-Column Layout */}
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto'>
+          
+          {/* Left Column - Photo & Highlights */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className='lg:col-span-5 relative space-y-6'
+          >
+            {/* Profile Image Frame */}
+            <div className="relative rounded-3xl overflow-hidden glass-panel p-3 border-purple/30 shadow-2xl">
+              <img 
+                src={assets.aboutProfile} 
+                alt="Umindu Dinal" 
+                className='w-full h-[420px] object-cover rounded-2xl'
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-100/90 via-transparent to-transparent rounded-2xl" />
+              
+              {/* Floating Highlight Box */}
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-purple/20 flex items-center justify-center text-purple text-lg shrink-0">
+                    <FaGraduationCap />
                   </div>
-
-                  {/* Card Content */}
-                  <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                     {
-                        aboutInfo.map((data, index) => (
-                           <div key={index} className='bg-dark-300 rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-2 cursor-pointer'>
-                              <div className='text-purple text-4xl mb-3'>
-                                 <data.icon/>
-                              </div>
-                              <h3 className='text-xl font-semibold mb-3'>{data.title}</h3>
-                              <p className='text-gray-400'>{data.description}</p>
-                           </div>
-                        ))
-                     }
+                  <div>
+                    <p className="text-xs text-gray-400 font-medium">HND in Information Technology</p>
+                    <p className="text-sm font-bold text-white">Institute of Technology Univ of Moratuwa</p>
                   </div>
-               </motion.div>
-
+                </div>
+              </div>
             </div>
-         </div>
 
-      </motion.div>
-      </>
-   )
+            {/* Quick Profile Summary Badge Box */}
+            <div className="glass-panel rounded-2xl p-5 border-dark-400/50 space-y-3">
+              <div className="flex items-center justify-between text-xs pb-2 border-b border-dark-400/40">
+                <span className="text-gray-400 flex items-center gap-1.5"><FaUser className="text-purple" /> Name:</span>
+                <span className="text-white font-semibold">Umindu Dinal</span>
+              </div>
+              <div className="flex items-center justify-between text-xs pb-2 border-b border-dark-400/40">
+                <span className="text-gray-400 flex items-center gap-1.5"><FaGraduationCap className="text-purple" /> Education:</span>
+                <span className="text-white font-semibold">ITUM (University of Moratuwa)</span>
+              </div>
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-gray-400 flex items-center gap-1.5"><FaMapMarkerAlt className="text-purple" /> Location:</span>
+                <span className="text-white font-semibold">Polonnaruwa, Sri Lanka</span>
+              </div>
+            </div>
+
+          </motion.div>
+
+          {/* Right Column - Text Narrative & Key Pillars */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className='lg:col-span-7 space-y-8'
+          >
+            {/* Developer Story Box */}
+            <div className='glass-panel rounded-2xl p-8 border-dark-400/50 space-y-4'>
+              <h3 className='text-2xl font-bold text-white flex items-center gap-3'>
+                <span className="w-2 h-7 bg-purple rounded-full inline-block"></span>
+                My Technical Background
+              </h3>
+              <p className='text-gray-300 leading-relaxed text-base'>
+                I am an Information Technology undergraduate at the <strong className="text-white">Institute of Technology, University of Moratuwa (ITUM)</strong>, specializing in software engineering, full-stack web architecture, backend services, and computer vision systems.
+              </p>
+              <p className='text-gray-300 leading-relaxed text-base'>
+                My technical versatility spans multiple languages (<strong className="text-purple">Java, Python, C#, JavaScript, Dart, Go</strong>), frontend frameworks (<strong className="text-purple">React, Vue.js, Flutter, Tailwind CSS</strong>), and robust backends (<strong className="text-purple">Spring Boot, Gin, .NET, FastAPI</strong>) integrated with <strong className="text-purple">PostgreSQL, MySQL, and MongoDB</strong>.
+              </p>
+              <p className='text-gray-300 leading-relaxed text-base'>
+                Beyond standard web development, I am passionate about computer vision and AI modeling (<strong className="text-purple">YOLOv8, OpenCV, Ultralytics</strong>), Docker containerization, and embedded systems simulation (<strong className="text-purple">Proteus</strong>).
+              </p>
+            </div>
+
+            {/* 4 Feature Cards Grid */}
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+              {aboutInfo.map((data, index) => {
+                const IconComp = data.icon;
+                return (
+                  <motion.div 
+                    key={index} 
+                    whileHover={{ y: -4 }}
+                    transition={{ duration: 0.2 }}
+                    className='glass-panel rounded-2xl p-5 border-dark-400/50 hover:border-purple/40 transition-colors'
+                  >
+                    <div className={`${data.color} text-3xl mb-3`}>
+                      <IconComp />
+                    </div>
+                    <h4 className='text-lg font-bold text-white mb-1.5'>{data.title}</h4>
+                    <p className='text-gray-400 text-xs sm:text-sm leading-relaxed'>{data.description}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default About

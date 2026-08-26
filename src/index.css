@@ -1,47 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 * {
-   font-family: 'Saira', sans-serif;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
 }
 
 @theme {
-   --color-dark-100: #1a1a1a;
-   --color-dark-200: #1f1f1f;
-   --color-dark-300: #2d2d2d;
-   --color-dark-400: #3d3d3d;
-   --color-purple: #8B5CF6;
-   --color-pink: #EC4899;
-   --color-blue: #3B82F6;
-}
-.typwriter {
-   overflow: hidden;
-   border-right: .15em solid #8B5CF6;
-   white-space: nowrap;
-   width: 0;
-   animation: typing 3s steps(20, end) infinite, blink-caret 0.75s step-end infinite;
+  --color-dark-100: #0b0d14;
+  --color-dark-200: #121522;
+  --color-dark-300: #1a1f30;
+  --color-dark-400: #262e45;
+  --color-purple: #8b5cf6;
+  --color-pink: #ec4899;
+  --color-blue: #3b82f6;
+  --color-cyan: #06b6d4;
+  --color-emerald: #10b981;
 }
 
-@keyframes typing {
-   0%   { 
-      width: 0 
-   }
-   40%  { 
-      width: 15ch
-   }   
-   60%  {
-      width: 15ch 
-   }  
-   100% { 
-      width: 0 
-   }    
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
-@keyframes blink-caret {
-   from, to { 
-      border-color: transparent 
-   }
-   50% { 
-      border-color: #8B5CF6; 
-   }
+::-webkit-scrollbar-track {
+  background: #0b0d14;
+}
+::-webkit-scrollbar-thumb {
+  background: #262e45;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: #ffffff;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: rgba(26, 31, 48, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.18), transparent 70%);
 }

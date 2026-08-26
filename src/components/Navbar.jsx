@@ -1,90 +1,100 @@
-import { div } from 'framer-motion/client';
 import React, { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import { FaXmark } from 'react-icons/fa6'
 
 const Navbar = () => {
+   const [showMenu, setShowMenu] = useState(false);
+   const location = useLocation();
+   const navigate = useNavigate();
 
-   const[showMenu, setShowMenu] = useState(false);
+   const navLinks = [
+      { name: 'Home', id: 'home' },
+      { name: 'About', id: 'about' },
+      { name: 'Skills', id: 'skills' },
+      { name: 'Projects', id: 'projects' },
+      { name: 'Experience', id: 'experience' },
+      { name: 'Contact', id: 'contact' },
+   ];
+
+   const handleNavClick = (e, sectionId) => {
+      e.preventDefault();
+      setShowMenu(false);
+
+      if (location.pathname !== '/') {
+         navigate('/');
+         setTimeout(() => {
+            const element = document.getElementById(sectionId);
+            if (element) {
+               element.scrollIntoView({ behavior: 'smooth' });
+            } else {
+               window.scrollTo(0, 0);
+            }
+         }, 100);
+      } else {
+         const element = document.getElementById(sectionId);
+         if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+         }
+      }
+   };
 
    return (
-      <>
-      <nav className='fixed w-full z-50 bg-dark-100/90 backdrop-blur-sm py-4 px-8 shadow-lg'>
-         <div className='container mx-auto flex justify-between items-center'>
+      <header className='fixed w-full z-50 bg-dark-100/80 backdrop-blur-md border-b border-white/5 py-4 px-6 shadow-xl'>
+         <div className='container mx-auto flex justify-between items-center max-w-6xl'>
             <div>
-               <a href="#" className='text-3xl font-bold text-white items-center'>Umindu<span className='text-purple'>Dinal</span></a>
+               <Link 
+                  to="/" 
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+                  className='text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-1'
+               >
+                  Umindu<span className='text-gradient'>Dinal</span>
+               </Link>
             </div>
-            <div className='hidden md:flex space-x-10'>
-               <a href="#home" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                  <span>Home</span>
-                  <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-               </a>
-               <a href="#about" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                  <span>About</span>
-                  <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-               </a>
-               <a href="#skills" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                  <span>Skills</span>
-                  <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-               </a>
-               <a href="#projects" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                  <span>Projects</span>
-                  <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-               </a>
-               <a href="#experience" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                  <span>Experience</span>
-                  <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-               </a>
-               <a href="#contact" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                  <span>Contact</span>
-                  <span className='absolute left-0 -bottom-1 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full'></span>
-               </a>
+
+            <div className='hidden md:flex items-center space-x-8'>
+               {navLinks.map((link) => (
+                  <a
+                     key={link.id}
+                     href={`#${link.id}`}
+                     onClick={(e) => handleNavClick(e, link.id)}
+                     className='relative text-sm font-medium text-gray-300 transition duration-300 hover:text-white group py-1'
+                  >
+                     <span>{link.name}</span>
+                     <span className='absolute left-0 -bottom-0.5 w-0 h-0.5 bg-gradient-to-r from-purple to-pink transition-all duration-300 group-hover:w-full rounded-full'></span>
+                  </a>
+               ))}
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-               {
-                  showMenu ?
-                  <FaXmark onClick={() => setShowMenu(!showMenu)} className="text-2xl cursor-pointer" />:
-                  <FaBars onClick={() => setShowMenu(!showMenu)} className="text-2xl cursor-pointer" />
-               }
+               <button
+                  onClick={() => setShowMenu(!showMenu)}
+                  className="p-2 text-gray-300 hover:text-white rounded-lg glass-panel transition"
+                  aria-label="Toggle Menu"
+               >
+                  {showMenu ? <FaXmark className="text-xl" /> : <FaBars className="text-xl" />}
+               </button>
             </div>
 
          </div>
 
          {/* Mobile Menu */}
-         {
-            showMenu && (
-               <div className='md:hidden mt-4 bg-dark-300 h-screen p-8 flex flex-col space-y-8 rounded-2xl justify-center items-center'>
-                  <a onClick={() => setShowMenu(!showMenu)} href="#home" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                     <span>Home</span>
-                     <span className='absolute left-0 -bottom-1.5 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full rounded-2xl'></span>
+         {showMenu && (
+            <div className='md:hidden mt-4 glass-panel rounded-2xl p-8 flex flex-col space-y-6 justify-center items-center text-center shadow-2xl border-purple/30'>
+               {navLinks.map((link) => (
+                  <a
+                     key={link.id}
+                     href={`#${link.id}`}
+                     onClick={(e) => handleNavClick(e, link.id)}
+                     className='relative text-lg font-semibold text-gray-200 hover:text-purple transition duration-300'
+                  >
+                     <span>{link.name}</span>
                   </a>
-                  <a onClick={() => setShowMenu(!showMenu)} href="#about" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                     <span>About</span>
-                     <span className='absolute left-0 -bottom-1.5 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full rounded-2xl'></span>
-                  </a>
-                  <a onClick={() => setShowMenu(!showMenu)} href="#skills" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                     <span>Skills</span>
-                     <span className='absolute left-0 -bottom-1.5 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full rounded-2xl'></span>
-                  </a>
-                  <a onClick={() => setShowMenu(!showMenu)} href="#projects" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                     <span>Projects</span>
-                     <span className='absolute left-0 -bottom-1.5 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full rounded-2xl'></span>
-                  </a>
-                  <a onClick={() => setShowMenu(!showMenu)} href="#experience" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                     <span>Experience</span>
-                     <span className='absolute left-0 -bottom-1.5 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full rounded-2xl'></span>
-                  </a>
-                  <a onClick={() => setShowMenu(!showMenu)} href="#contact" className='relative text-white/80 transition duration-300 hover:text-purple group'>
-                     <span>Contact</span>
-                     <span className='absolute left-0 -bottom-1.5 w-0 h-0.5 bg-purple transition-all duration-300 group-hover:w-full rounded-2xl'></span>
-                  </a>
-               </div>
-            )
-         }
-      </nav>
-      </>
+               ))}
+            </div>
+         )}
+      </header>
    )
 }
 
