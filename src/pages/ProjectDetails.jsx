@@ -87,9 +87,9 @@ const ProjectDetails = () => {
           <img 
             src={project.image} 
             alt={project.title} 
-            className="w-full max-h-[500px] object-cover object-top transition duration-500 group-hover:scale-102"
+            className="w-full max-h-125 object-cover object-top transition duration-500 group-hover:scale-102"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark-100/80 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-t from-dark-100/80 via-transparent to-transparent pointer-events-none" />
         </motion.div>
 
         {/* Details Grid */}
@@ -129,7 +129,7 @@ const ProjectDetails = () => {
 
             {/* Key Insights / Learnings */}
             {project.highlights && (
-              <div className="bg-gradient-to-r from-purple/10 to-pink/10 rounded-2xl p-8 border border-purple/20">
+              <div className="bg-linear-to-r from-purple/10 to-pink/10 rounded-2xl p-8 border border-purple/20">
                 <h2 className="text-xl font-bold mb-3 flex items-center text-purple gap-2">
                   <FaLightbulb className="text-yellow-400" /> Key Takeaway
                 </h2>

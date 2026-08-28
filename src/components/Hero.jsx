@@ -4,11 +4,11 @@ import { assets, heroStats } from '../assets/assets'
 import { FaArrowRight, FaDownload, FaReact, FaServer, FaCode, FaGithub, FaLinkedin, FaMicrochip } from 'react-icons/fa'
 
 const titles = [
-  "Full Stack & Systems Developer",
-  "AI & Computer Vision Engineer",
-  "Spring Boot & REST API Developer",
-  "Embedded IoT & Electronics Developer",
-  "ITUM Moratuwa Undergraduate"
+  "Mobile App & Systems Developer",
+  "Full-Stack Software Engineer",
+  "AI & Deep Learning Developer",
+  "Backend & Cloud API Developer",
+  "IT Student @ University of Moratuwa"
 ];
 
 const Hero = () => {
@@ -91,7 +91,7 @@ const Hero = () => {
             <div className='flex flex-wrap items-center gap-3.5 mb-12'>
               <a 
                 href="#projects" 
-                className='px-6 py-3.5 bg-gradient-to-r from-purple to-pink rounded-xl font-semibold text-white shadow-lg shadow-purple/25 hover:shadow-purple/40 hover:scale-102 transition duration-300 flex items-center gap-2 text-sm sm:text-base'
+                className='px-6 py-3.5 bg-linear-to-r from-purple to-pink rounded-xl font-semibold text-white shadow-lg shadow-purple/25 hover:shadow-purple/40 hover:scale-102 transition duration-300 flex items-center gap-2 text-sm sm:text-base'
               >
                 <span>Explore My Work</span>
                 <FaArrowRight className='text-sm' />
@@ -164,7 +164,7 @@ const Hero = () => {
             <div className='relative w-72 h-72 sm:w-96 sm:h-96'>
               
               {/* Outer Glow Ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple via-pink to-blue blur-2xl opacity-30 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full bg-linear-to-tr from-purple via-pink to-blue blur-2xl opacity-30 animate-pulse"></div>
 
               {/* Profile Image Frame */}
               <motion.div 

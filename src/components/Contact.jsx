@@ -14,20 +14,11 @@ import {
 } from 'react-icons/fa'
 import emailjs from '@emailjs/browser'
 
-const projectTypes = [
-  "Full-Stack Web App",
-  "AI & Computer Vision",
-  "Backend REST API",
-  "Mobile App",
-  "Embedded System",
-  "Desktop Software"
-]
-
 const Contact = () => {
   const formRef = useRef()
   const [status, setStatus] = useState('')
   const [copiedField, setCopiedField] = useState(null)
-  const [selectedType, setSelectedType] = useState('')
+  const [setSelectedType] = useState('')
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -96,32 +87,6 @@ const Contact = () => {
             <p className="text-gray-400 text-xs sm:text-sm mb-6">Fill out the form below and I'll respond as soon as possible.</p>
             
             <form ref={formRef} onSubmit={sendEmail} className='space-y-6'>
-              
-              {/* Optional Project Type Selection Chips */}
-              <div>
-                <label className='block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2.5'>
-                  What are you looking to build?
-                </label>
-                <div className='flex flex-wrap gap-2'>
-                  {projectTypes.map((type) => (
-                    <button
-                      type='button'
-                      key={type}
-                      onClick={() => setSelectedType(selectedType === type ? '' : type)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                        selectedType === type 
-                          ? 'bg-purple text-white border border-purple-400 shadow-md shadow-purple/30' 
-                          : 'bg-dark-300 border border-dark-400 text-gray-300 hover:border-purple/40 hover:text-white'
-                      }`}
-                    >
-                      {type}
-                    </button>
-                  ))}
-                </div>
-                {/* Hidden input to pass selected project type in emailjs */}
-                <input type="hidden" name="project_type" value={selectedType} />
-              </div>
-
               <div>
                 <label htmlFor="name" className='block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2'>
                   Your Name
@@ -131,7 +96,7 @@ const Contact = () => {
                   name="name"
                   id="name"
                   required
-                  placeholder="e.g. John Doe"
+                  placeholder="e.g. S U Dinal"
                   className='w-full bg-dark-300/80 border border-dark-400 rounded-xl px-4 py-3.5 outline-none text-white focus:border-purple focus:ring-1 focus:ring-purple transition-all text-sm'
                 />
               </div>
@@ -145,7 +110,7 @@ const Contact = () => {
                   name="email"
                   id="email"
                   required
-                  placeholder="e.g. john@example.com"
+                  placeholder="e.g. dinal@example.com" 
                   className='w-full bg-dark-300/80 border border-dark-400 rounded-xl px-4 py-3.5 outline-none text-white focus:border-purple focus:ring-1 focus:ring-purple transition-all text-sm'
                 />
               </div>
@@ -179,7 +144,7 @@ const Contact = () => {
               <button
                 type='submit'
                 disabled={status === 'sending'}
-                className='w-full bg-gradient-to-r from-purple to-pink text-white font-semibold px-6 py-4 rounded-xl shadow-lg shadow-purple/25 hover:shadow-purple/40 hover:scale-[1.01] transition duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60'
+                className='w-full bg-linear-to-r from-purple to-pink text-white font-semibold px-6 py-4 rounded-xl shadow-lg shadow-purple/25 hover:shadow-purple/40 hover:scale-[1.01] transition duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60'
               >
                 <FaPaperPlane className="text-sm" />
                 <span>{status === 'sending' ? 'Sending Message...' : 'Send Message'}</span>

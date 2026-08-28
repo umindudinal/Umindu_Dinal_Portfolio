@@ -45,7 +45,7 @@ const About = () => {
                 alt="Umindu Dinal" 
                 className='w-full h-auto rounded-2xl'
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-100/80 via-transparent to-transparent rounded-2xl pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-dark-100/80 via-transparent to-transparent rounded-2xl pointer-events-none" />
               
               {/* Floating Highlight Box */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border-white/10">

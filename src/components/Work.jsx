@@ -4,17 +4,14 @@ import { workData } from '../assets/assets'
 import { FaGraduationCap, FaBriefcase, FaCheckCircle, FaMapMarkerAlt } from 'react-icons/fa'
 
 const filterCategories = [
-  { id: 'all', label: 'All Milestones' },
-  { id: 'Education', label: 'Education' },
   { id: 'Experience', label: 'Work Experience' },
+  { id: 'Education', label: 'Education' },
 ];
 
 const Work = () => {
-  const [activeTab, setActiveTab] = useState('all')
+  const [activeTab, setActiveTab] = useState('Experience')
 
-  const filteredData = activeTab === 'all'
-    ? workData
-    : workData.filter(item => item.category === activeTab)
+  const filteredData = workData.filter(item => item.category === activeTab)
 
   return (
     <section 
@@ -46,7 +43,7 @@ const Work = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                   isActive 
-                    ? 'bg-gradient-to-r from-purple to-pink text-white shadow-lg shadow-purple/25 scale-105' 
+                    ? 'bg-linear-to-r from-purple to-pink text-white shadow-lg shadow-purple/25 scale-105' 
                     : 'glass-panel text-gray-300 hover:text-white hover:border-purple/40'
                 }`}
               >
@@ -60,7 +57,7 @@ const Work = () => {
         <div className='max-w-5xl mx-auto'>
           <motion.div 
             layout
-            className='space-y-8 relative before:content-[""] before:absolute before:left-5 sm:before:left-6 before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-purple before:via-pink before:to-blue'
+            className='space-y-8 relative before:content-[""] before:absolute before:left-5 sm:before:left-6 before:top-3 before:bottom-3 before:w-0.5 before:bg-linear-to-b before:from-purple before:via-pink before:to-blue'
           >
             <AnimatePresence>
               {filteredData.map((item, index) => {

@@ -23,6 +23,7 @@ import projectImg9 from '../assets/project9.avif';
 import projectImg7 from '../assets/project7.avif';
 import projectImg8 from '../assets/project8.avif';
 import projectImg13 from '../assets/project13.avif';
+import projectImg14 from '../assets/project14.avif';
 import logo from '../assets/logo.avif';
  
 export const assets = {
@@ -31,12 +32,7 @@ export const assets = {
   logo,
 };
 
-export const heroStats = [
-  { label: 'Projects Built', value: '7+', icon: FaRocket },
-  { label: 'Technologies', value: '15+', icon: FaCode },
-  { label: 'Education', value: 'ITUM', icon: FaGraduationCap },
-  { label: 'Code Quality', value: '100%', icon: FaShieldAlt },
-];
+
 
 export const aboutInfo = [
   {
@@ -70,37 +66,36 @@ export const skills = [
     title: 'Programming Languages',
     icon: FaCode,
     description: 'Core languages used for building web apps, backends, mobile apps, and embedded systems.',
-    tags: ['Java 21', 'Python', 'C#', 'JavaScript', 'Dart', 'Embedded C', 'PHP']
+    tags: ['Java 21', 'Python', 'C#', 'JavaScript', 'Dart', 'Embedded C', 'PHP', 'SQL']
   },
   {
     title: 'Frontend & Mobile',
     icon: FaReact,
     description: 'Crafting responsive user interfaces, mobile applications, and dynamic web portals.',
-    tags: ['React 19', 'Flutter', 'Tailwind CSS 4', 'Vite 7', 'Framer Motion', 'HTML5/CSS3']
+    tags: ['React 19', 'Flutter', 'Tailwind CSS 4', 'Framer Motion', 'HTML5/CSS3', 'Vite 7']
   },
   {
     title: 'Backend & Frameworks',
     icon: FaServer,
     description: 'Engineering robust RESTful APIs, business logic layers, and server-side microservices.',
-    tags: ['Spring Boot 3', 'Spring Data JPA', 'Node.js', 'Express.js', '.NET Framework']
+    tags: ['Spring Boot 3', 'Node.js & Express', 'RESTful APIs', 'Firebase FCM', '.NET Framework']
   },
   {
     title: 'Databases & Storage',
     icon: FaDatabase,
     description: 'Designing, querying, and optimizing relational data structures and persistence layers.',
-    tags: ['MySQL', 'Microsoft SQL Server', 'SQLite', 'Hibernate', 'ADO.NET']
+    tags: ['MySQL', 'Microsoft SQL Server', 'SQLite', 'Spring Data JPA', 'ADO.NET']
   },
   {
     title: 'AI, Tools & Embedded',
     icon: FaTools,
     description: 'Computer vision detection models, OCR, embedded microcontroller simulation, and version control.',
-    tags: ['YOLOv8', 'OpenCV', 'EasyOCR', 'TensorFlow/Keras', 'ATmega32', 'Proteus', 'Git & GitHub']
+    tags: ['YOLOv8', 'OpenCV & EasyOCR', 'TensorFlow / Keras', 'Streamlit', 'ATmega32 & Proteus', 'Git & GitHub']
   }
 ];
 
 export const projectCategories = [
-  { id: 'all', label: 'All Projects' },
-  { id: 'AI & Mobile', label: 'AI & Mobile' },
+  { id: 'Mobile Application', label: 'Mobile Apps' },
   { id: 'Web Application', label: 'Web Apps' },
   { id: 'Backend API', label: 'Backend APIs' },
   { id: 'Desktop Application', label: 'Desktop Software' },
@@ -108,6 +103,46 @@ export const projectCategories = [
 ];
 
 export const projects = [
+  {
+    id: "ape-bass",
+    title: "Home Services Marketplace Mobile App (Ape Bass)",
+    description: "A full-featured mobile marketplace that connects customers with skilled home service providers, enabling service discovery, bookings, job management, messaging, reviews, and provider profiles.",
+    longDescription: "Ape Bass is a Sri Lankan home services marketplace mobile application built with Flutter to connect customers with skilled service providers such as electricians, plumbers, carpenters, and other home-service professionals. The platform provides dedicated experiences for both Customers and Service Providers. Customers can explore service categories, discover providers, view profiles and ratings, submit service requests, manage bookings, communicate through in-app messaging, and leave reviews. Service Providers can complete professional onboarding, submit verification details, manage incoming job requests, accept and complete jobs, and maintain their profiles and portfolios. The application integrates with a RESTful backend API for core platform functionality, Firebase Cloud Messaging for push notifications, and SharedPreferences for local session and user data management.",
+    image: projectImg14,
+    tech: [
+      "Flutter",
+      "Dart",
+      "REST API",
+      "Firebase Cloud Messaging",
+      "SharedPreferences",
+      "Google Fonts",
+      "Image Picker",
+      "Image Cropper"
+    ],
+    category: ["Mobile Application"],
+    displayCategory: "Mobile App",
+    role: "Mobile App Developer",
+    duration: "2026",
+    features: [
+      "Dual-role system for Customers and Service Providers",
+      "Secure registration and login",
+      "Provider onboarding and verification",
+      "Service category browsing and provider discovery",
+      "Provider profiles with ratings and portfolios",
+      "Online service booking and request management",
+      "Customer booking history and tracking",
+      "Provider dashboard and job management",
+      "In-app customer-provider messaging",
+      "Reviews and rating system",
+      "Provider profile and portfolio management",
+      "Firebase push notifications",
+      "Persistent user sessions",
+      "Modern and responsive Flutter UI"
+    ],
+    highlights: "Designed and developed a complete two-sided home services marketplace mobile application using Flutter and Dart, integrating REST APIs, role-based customer and provider workflows, service discovery, booking management, job tracking, in-app messaging, reviews, provider verification, portfolio management, and Firebase push notifications.",
+    demo: "https://ape-bass-portfolio.vercel.app/",
+    code: ""
+  },
   {
     id: "agricare-lk",
     title: "AI Plant Disease Detection App (AgriCare LK)",
@@ -125,8 +160,8 @@ export const projects = [
       "OpenCV",
       "Microsoft SQL Server"
     ],
-    category: ["AI & Mobile", "Backend API"],
-    displayCategory: "AI Mobile Application",
+    category: ["Mobile Application"],
+    displayCategory: "Mobile App",
     role: "Full-Stack Developer",
     duration: "2026",
     features: [
@@ -161,8 +196,8 @@ export const projects = [
       "Pandas",
       "NumPy"
     ],
-    category: ["AI & Mobile", "Desktop Application"],
-    displayCategory: "AI & Security System",
+    category: ["Desktop Application"],
+    displayCategory: "Security System",
     role: "AI / Full-Stack Developer",
     duration: "2026",
     features: [
@@ -234,7 +269,7 @@ export const projects = [
       "Visual Studio 2022"
     ],
     category: ["Desktop Application"],
-    displayCategory: "Desktop Application",
+    displayCategory: "Desktop App",
     role: "Full-Stack Developer",
     duration: "2025",
     features: [
@@ -271,7 +306,7 @@ export const projects = [
       "XAMPP"
     ],
     category: ["Web Application"],
-    displayCategory: "Web Portal & App",
+    displayCategory: "Web App",
     role: "Full-Stack Developer",
     duration: "2025",
     features: [
@@ -312,7 +347,7 @@ export const projects = [
       "16x2 LCD"
     ],
     category: ["Embedded & IoT"],
-    displayCategory: "Embedded & IoT",
+    displayCategory: "IoT & Embedded System",
     role: "Embedded Systems Developer",
     duration: "2026",
     features: [
@@ -350,7 +385,7 @@ export const projects = [
       "GitHub Pages"
     ],
     category: ["Web Application"],
-    displayCategory: "Web Application",
+    displayCategory: "Web App",
     role: "Frontend Developer",
     duration: "2025",
     features: [
@@ -382,24 +417,25 @@ export const workData = [
     description: "Specializing in Software Engineering, Web Architecture, Database Systems, Computer Vision, and Embedded Systems.",
     achievements: [
       "Comprehensive coursework in Data Structures, Algorithms, OOP (Java & C#), Relational Databases, and Microcontroller Systems",
-      "Hands-on full-stack development, AI computer vision modeling, and embedded hardware simulation"
+      "Hands-on full-stack web development, mobile applications, AI computer vision modeling, and embedded hardware simulation"
     ],
     skills: ["Java", "C#", "Python", "SQL", "Software Engineering", "Embedded Systems"],
     color: "purple"
   },
   {
-    role: "AI & Full-Stack Developer",
+    role: "AI & Full-Stack Mobile & Web Developer",
     company: "Freelance & Independent Engineering Projects",
     duration: "2025 - Present",
     category: "Experience",
     location: "Remote / Independent",
     description: "Architecting intelligent mobile & web applications, deep learning computer vision systems, and modern user interfaces.",
     achievements: [
+      "Engineered Ape Bass (Home Services Marketplace Mobile App) using Flutter, Dart, REST APIs, and Firebase Cloud Messaging",
       "Engineered AgriCare LK (AI Plant Disease Detection Mobile App) using Flutter, Node.js, TensorFlow, and SQL Server",
-      "Developed Automated Gate ANPR Security System using YOLOv8, EasyOCR, OpenCV, and CustomTkinter",
+      "Developed Automated Gate ANPR Security System using YOLOv8, EasyOCR, OpenCV, Streamlit, and CustomTkinter",
       "Built GoCeylon Tourism Web Application using React 19, Tailwind CSS 4, and Vite"
     ],
-    skills: ["Flutter", "Python", "React 19", "YOLOv8", "TensorFlow", "OpenCV", "Node.js"],
+    skills: ["Flutter", "Dart", "Firebase", "Python", "React 19", "YOLOv8", "TensorFlow", "OpenCV", "Node.js"],
     color: "pink"
   },
   {
@@ -418,4 +454,27 @@ export const workData = [
     skills: ["Spring Boot 3", "Java 21", "C# .NET", "PHP", "MySQL", "SQL Server", "Embedded C"],
     color: "blue"
   }
+];
+
+export const heroStats = [
+  { 
+    label: 'Projects Built', 
+    value: `${projects.length}+`, 
+    icon: FaRocket 
+  },
+  { 
+    label: 'Technologies', 
+    value: `${new Set([...skills.flatMap(s => s.tags), ...projects.flatMap(p => p.tech || [])]).size}+`, 
+    icon: FaCode 
+  },
+  { 
+    label: 'Education', 
+    value: 'ITUM', 
+    icon: FaGraduationCap 
+  },
+  { 
+    label: 'Code Quality', 
+    value: '100%', 
+    icon: FaShieldAlt 
+  },
 ];

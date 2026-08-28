@@ -5,16 +5,14 @@ import ProjectCard from './ProjectCard'
 import { FaArrowRight, FaCode } from 'react-icons/fa'
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategory, setActiveCategory] = useState(projectCategories[0]?.id || 'Mobile Application')
 
-  const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(project => {
-        if (Array.isArray(project.category)) {
-          return project.category.includes(activeCategory);
-        }
-        return project.category === activeCategory;
-      });
+  const filteredProjects = projects.filter(project => {
+    if (Array.isArray(project.category)) {
+      return project.category.includes(activeCategory);
+    }
+    return project.category === activeCategory;
+  });
 
   return (
     <section 
@@ -46,7 +44,7 @@ const Projects = () => {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
                   isActive 
-                    ? 'bg-gradient-to-r from-purple to-pink text-white shadow-lg shadow-purple/30 scale-105 border border-purple/50' 
+                    ? 'bg-linear-to-r from-purple to-pink text-white shadow-lg shadow-purple/30 scale-105 border border-purple/50' 
                     : 'glass-panel text-gray-300 hover:text-white hover:border-purple/40 hover:bg-white/5'
                 }`}
               >
@@ -77,20 +75,6 @@ const Projects = () => {
             ))}
           </AnimatePresence>
         </motion.div>
-
-        {/* Footer Link to GitHub */}
-        <div className='text-center mt-16'>
-          <a 
-            href="https://github.com/umindudinal" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className='inline-flex items-center gap-2.5 px-7 py-3.5 glass-panel border-purple/40 rounded-xl text-white font-medium hover:bg-purple/20 hover:border-purple transition duration-300'
-          >
-            <FaCode className="text-purple" />
-            <span>Explore All Projects on GitHub</span>
-            <FaArrowRight className='text-xs ml-1' />
-          </a>
-        </div>
 
       </div>
     </section>
