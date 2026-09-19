@@ -82,14 +82,13 @@ const ProjectDetails = () => {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-2xl overflow-hidden shadow-2xl border border-dark-300 mb-12 bg-dark-200 group"
+          className="relative rounded-2xl overflow-hidden shadow-2xl border border-dark-300 mb-12 bg-dark-200"
         >
           <img 
             src={project.image} 
             alt={project.title} 
-            className="w-full max-h-125 object-cover object-top transition duration-500 group-hover:scale-102"
+            className="w-full h-auto object-contain"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-dark-100/80 via-transparent to-transparent pointer-events-none" />
         </motion.div>
 
         {/* Details Grid */}

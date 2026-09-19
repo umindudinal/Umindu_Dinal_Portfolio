@@ -7,18 +7,15 @@ const About = () => {
   return (
     <section 
       id='about'
-      className='py-24 bg-dark-200 relative overflow-hidden'
+      className='py-20 lg:py-24 bg-dark-200 relative overflow-hidden'
     >
       {/* Background Glow */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-purple/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className='container mx-auto px-6 relative z-10'>
+      <div className='container mx-auto px-6 max-w-6xl relative z-10'>
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="px-4 py-1.5 rounded-full glass-panel border-purple/30 text-purple text-xs font-semibold uppercase tracking-wider mb-3 inline-block">
-            Get To Know Me
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <h2 className='text-3xl sm:text-4xl font-extrabold text-white mb-4'>
             About <span className='text-gradient'>Me</span>
           </h2>
@@ -28,7 +25,7 @@ const About = () => {
         </div>
 
         {/* Content 2-Column Layout */}
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center mx-auto'>
           
           {/* Left Column - Photo & Highlights */}
           <motion.div 

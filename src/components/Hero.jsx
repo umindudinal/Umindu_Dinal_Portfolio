@@ -42,14 +42,14 @@ const Hero = () => {
   return (
     <section 
       id='home'
-      className='min-h-screen flex items-center pt-28 pb-16 bg-radial-glow relative overflow-hidden'
+      className='min-h-screen flex items-center pt-28 pb-16 lg:pt-32 lg:pb-20 bg-radial-glow relative overflow-hidden'
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-purple/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-pink/15 rounded-full blur-3xl pointer-events-none" />
 
-      <div className='container mx-auto px-6 relative z-10'>
-        <div className='flex flex-col lg:flex-row items-center justify-between gap-12'>
+      <div className='container mx-auto px-6 max-w-6xl relative z-10'>
+        <div className='flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12 w-full'>
           
           {/* Left Content Column */}
           <motion.div 
@@ -59,7 +59,7 @@ const Hero = () => {
             className='lg:w-7/12 text-left'
           >
             {/* Availability Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel border-purple/30 mb-6">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel border-purple/30 mb-5">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
@@ -75,7 +75,7 @@ const Hero = () => {
             </h1>
             
             {/* Dynamic Typewriter Title */}
-            <div className="h-12 mb-6 flex items-center">
+            <div className="min-h-12 mb-5 flex items-center">
               <h2 className='text-2xl sm:text-3xl font-semibold text-gray-300'>
                 {text}
                 <span className="ml-1 border-r-2 border-purple animate-pulse inline-block h-7"></span>
@@ -83,12 +83,12 @@ const Hero = () => {
             </div>
 
             {/* Introduction Bio */}
-            <p className='text-gray-300 text-base md:text-lg mb-8 max-w-2xl leading-relaxed'>
+            <p className='text-gray-300 text-base md:text-lg mb-7 max-w-2xl leading-relaxed'>
               Information Technology Undergraduate at <strong className="text-white">ITUM (University of Moratuwa)</strong>. Specializing in Full-Stack Web Architecture, Spring Boot REST APIs, AI & Computer Vision, Desktop Software, and Embedded IoT Systems.
             </p>
 
             {/* CTA Buttons & Social Links */}
-            <div className='flex flex-wrap items-center gap-3.5 mb-12'>
+            <div className='flex flex-wrap items-center gap-3.5 mb-9 sm:mb-11'>
               <a 
                 href="#projects" 
                 className='px-6 py-3.5 bg-linear-to-r from-purple to-pink rounded-xl font-semibold text-white shadow-lg shadow-purple/25 hover:shadow-purple/40 hover:scale-102 transition duration-300 flex items-center gap-2 text-sm sm:text-base'
@@ -137,11 +137,11 @@ const Hero = () => {
             </div>
 
             {/* Stats Counter Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 max-w-xl">
               {heroStats.map((stat, idx) => {
                 const IconComponent = stat.icon;
                 return (
-                  <div key={idx} className="glass-panel p-4 rounded-xl border-dark-400/50">
+                  <div key={idx} className="glass-panel p-3.5 sm:p-4 rounded-xl border-dark-400/50">
                     <div className="flex items-center gap-2 mb-1">
                       <IconComponent className="text-purple text-sm" />
                       <span className="text-xl md:text-2xl font-bold text-white">{stat.value}</span>
@@ -161,7 +161,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className='lg:w-5/12 flex justify-center relative'
           >
-            <div className='relative w-72 h-72 sm:w-96 sm:h-96'>
+            <div className='relative w-72 h-72 sm:w-84 sm:h-84 lg:w-96 lg:h-96'>
               
               {/* Outer Glow Ring */}
               <div className="absolute inset-0 rounded-full bg-linear-to-tr from-purple via-pink to-blue blur-2xl opacity-30 animate-pulse"></div>
@@ -183,7 +183,7 @@ const Hero = () => {
               <motion.div 
                 animate={{ y: [-8, 8, -8] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -left-4 glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-2.5 shadow-xl border-purple/30 z-20"
+                className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 glass-panel px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2.5 shadow-xl border-purple/30 z-20"
               >
                 <FaReact className="text-cyan text-xl animate-spin-slow" />
                 <div>
@@ -196,7 +196,7 @@ const Hero = () => {
               <motion.div 
                 animate={{ y: [8, -8, 8] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -right-4 glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-2.5 shadow-xl border-emerald-500/30 z-20"
+                className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 glass-panel px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl flex items-center gap-2.5 shadow-xl border-emerald-500/30 z-20"
               >
                 <FaServer className="text-emerald-400 text-lg" />
                 <div>
@@ -209,7 +209,7 @@ const Hero = () => {
               <motion.div 
                 animate={{ y: [-6, 6, -6] }}
                 transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-10 -left-6 glass-panel px-3.5 py-2.5 rounded-2xl flex items-center gap-2 shadow-xl border-purple/30 z-20"
+                className="absolute bottom-8 -left-4 sm:bottom-10 sm:-left-6 glass-panel px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-2xl flex items-center gap-2 shadow-xl border-purple/30 z-20"
               >
                 <FaMicrochip className="text-purple text-base" />
                 <div>

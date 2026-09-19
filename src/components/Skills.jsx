@@ -29,7 +29,10 @@ import {
   SiFramer,
   SiSupabase,
   SiMongodb,
-  SiBootstrap
+  SiPostgresql,
+  SiLeaflet,
+  SiPostman,
+  SiJsonwebtokens
 } from 'react-icons/si'
 
 const techStack = [
@@ -46,29 +49,34 @@ const techStack = [
   // Frontend & Mobile
   { name: 'React 19', category: 'Frontend', icon: FaReact, color: 'text-cyan-400', level: 'Web UI' },
   { name: 'Tailwind CSS 4', category: 'Frontend', icon: SiTailwindcss, color: 'text-sky-400', level: 'Styling' },
-  { name: 'Vite 7', category: 'Frontend', icon: SiVite, color: 'text-purple-400', level: 'Build Tool' },
   { name: 'Flutter', category: 'Frontend', icon: SiFlutter, color: 'text-sky-400', level: 'Mobile UI' },
-  { name: 'HTML5', category: 'Frontend', icon: FaHtml5, color: 'text-orange-400', level: 'Web UI' },
-  { name: 'CSS3', category: 'Frontend', icon: FaCss3, color: 'text-cyan-400', level: 'Web UI' },
+  { name: 'Framer Motion', category: 'Frontend', icon: SiFramer, color: 'text-pink-400', level: 'Animations' },
+  { name: 'Vite 7', category: 'Frontend', icon: SiVite, color: 'text-purple-400', level: 'Build Tool' },
+  { name: 'HTML5', category: 'Frontend', icon: FaHtml5, color: 'text-orange-400', level: 'Markup' },
+  { name: 'CSS3', category: 'Frontend', icon: FaCss3, color: 'text-blue-400', level: 'Styling' },
 
   // Backend & Frameworks
   { name: 'Spring Boot 3', category: 'Backend', icon: SiSpringboot, color: 'text-emerald-400', level: 'Backend API' },
   { name: 'Node.js & Express', category: 'Backend', icon: FaNodeJs, color: 'text-emerald-500', level: 'REST API' },
   { name: 'RESTful APIs', category: 'Backend', icon: FaServer, color: 'text-indigo-300', level: 'Architecture' },
+  { name: 'JWT Auth', category: 'Backend', icon: SiJsonwebtokens, color: 'text-pink-400', level: 'Security' },
   { name: 'Firebase FCM', category: 'Backend', icon: SiFirebase, color: 'text-amber-500', level: 'Push / Cloud' },
   { name: '.NET Framework', category: 'Backend', icon: SiDotnet, color: 'text-purple-400', level: 'Desktop & Web' },
 
   // Databases
+  { name: 'PostgreSQL', category: 'Databases', icon: SiPostgresql, color: 'text-sky-400', level: 'RDBMS' },
+  { name: 'Supabase', category: 'Databases', icon: SiSupabase, color: 'text-emerald-400', level: 'Cloud DB' },
   { name: 'MySQL', category: 'Databases', icon: SiMysql, color: 'text-sky-500', level: 'RDBMS' },
   { name: 'MS SQL Server', category: 'Databases', icon: FaDatabase, color: 'text-red-400', level: 'RDBMS' },
   { name: 'SQLite', category: 'Databases', icon: FaDatabase, color: 'text-blue-300', level: 'Embedded DB' },
-  { name: 'Supabase', category: 'Databases', icon: SiSupabase, color: 'text-green-400', level: 'Cloud DB' },
   { name: 'MongoDB', category: 'Databases', icon: SiMongodb, color: 'text-green-400', level: 'NoSQL DB' },
 
-  // AI, Tools & Embedded
+  // AI, Tools & GIS
+  { name: 'Leaflet & GIS', category: 'Tools & ML', icon: SiLeaflet, color: 'text-emerald-400', level: 'GIS Mapping' },
   { name: 'YOLOv8', category: 'Tools & ML', icon: FaBrain, color: 'text-pink-400', level: 'Vision ML' },
   { name: 'OpenCV & EasyOCR', category: 'Tools & ML', icon: SiOpencv, color: 'text-red-400', level: 'Computer Vision' },
   { name: 'TensorFlow / Keras', category: 'Tools & ML', icon: SiTensorflow, color: 'text-orange-500', level: 'Deep Learning' },
+  { name: 'Postman', category: 'Tools & ML', icon: SiPostman, color: 'text-orange-400', level: 'API Testing' },
   { name: 'Streamlit', category: 'Tools & ML', icon: SiStreamlit, color: 'text-rose-500', level: 'AI Web Apps' },
   { name: 'ATmega32 & Proteus', category: 'Tools & ML', icon: FaMicrochip, color: 'text-yellow-500', level: 'Embedded IoT' },
   { name: 'Git & GitHub', category: 'Tools & ML', icon: FaGitAlt, color: 'text-orange-500', level: 'Version Control' },
@@ -79,7 +87,7 @@ const categories = [
   { id: 'Frontend', label: 'Frontend & Mobile' },
   { id: 'Backend', label: 'Backend & APIs' },
   { id: 'Databases', label: 'Databases' },
-  { id: 'Tools & ML', label: 'AI, Tools & Embedded' },
+  { id: 'Tools & ML', label: 'AI, Tools & GIS' },
 ];
 
 const Skills = () => {
@@ -90,15 +98,12 @@ const Skills = () => {
   return (
     <section 
       id='skills'
-      className='py-24 bg-dark-100 relative'
+      className='py-20 lg:py-24 bg-dark-100 relative'
     >
-      <div className='container mx-auto px-6 relative z-10'>
+      <div className='container mx-auto px-6 max-w-6xl relative z-10'>
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="px-4 py-1.5 rounded-full glass-panel border-purple/30 text-purple text-xs font-semibold uppercase tracking-wider mb-3 inline-block">
-            Technical Capabilities
-          </span>
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
           <h2 className='text-3xl sm:text-4xl font-extrabold text-white mb-4'>
             Skills & <span className='text-gradient'>Technologies</span>
           </h2>

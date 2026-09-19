@@ -24,6 +24,7 @@ import projectImg7 from '../assets/project7.avif';
 import projectImg8 from '../assets/project8.avif';
 import projectImg13 from '../assets/project13.avif';
 import projectImg14 from '../assets/project14.avif';
+import projectImg15 from '../assets/project15.avif';
 import logo from '../assets/logo.avif';
  
 export const assets = {
@@ -78,19 +79,19 @@ export const skills = [
     title: 'Backend & Frameworks',
     icon: FaServer,
     description: 'Engineering robust RESTful APIs, business logic layers, and server-side microservices.',
-    tags: ['Spring Boot 3', 'Node.js & Express', 'RESTful APIs', 'Firebase FCM', '.NET Framework']
+    tags: ['Spring Boot 3', 'Node.js & Express', 'RESTful APIs', 'JWT Auth', 'Firebase FCM', '.NET Framework']
   },
   {
     title: 'Databases & Storage',
     icon: FaDatabase,
     description: 'Designing, querying, and optimizing relational data structures and persistence layers.',
-    tags: ['MySQL', 'Microsoft SQL Server', 'SQLite', 'Spring Data JPA', 'ADO.NET']
+    tags: ['PostgreSQL', 'Supabase', 'MySQL', 'Microsoft SQL Server', 'SQLite', 'MongoDB']
   },
   {
-    title: 'AI, Tools & Embedded',
+    title: 'AI, Tools & GIS',
     icon: FaTools,
-    description: 'Computer vision detection models, OCR, embedded microcontroller simulation, and version control.',
-    tags: ['YOLOv8', 'OpenCV & EasyOCR', 'TensorFlow / Keras', 'Streamlit', 'ATmega32 & Proteus', 'Git & GitHub']
+    description: 'Computer vision detection models, OCR, GIS mapping, API testing, and embedded microcontrollers.',
+    tags: ['Leaflet & GIS', 'YOLOv8', 'OpenCV & EasyOCR', 'TensorFlow / Keras', 'Postman', 'Streamlit', 'ATmega32', 'Git & GitHub']
   }
 ];
 
@@ -100,9 +101,67 @@ export const projectCategories = [
   { id: 'Backend API', label: 'Backend APIs' },
   { id: 'Desktop Application', label: 'Desktop Software' },
   { id: 'Embedded & IoT', label: 'Embedded & IoT' },
+  { id: 'University Project', label: 'University Projects' }
 ];
 
 export const projects = [
+  {
+    id: "guide-lanka",
+    title: "Smart Wildlife Safari Management System (GuideLanka)",
+    description: "A university project that develops a smart wildlife safari management platform connecting tourists, safari drivers, and park authorities through digital bookings, real-time GPS tracking, wildlife reporting, route optimization, and emergency response features.",
+    longDescription: "GuideLanka is a university project developed as a smart wildlife safari management system for modernizing safari operations in Sri Lanka. The platform connects three main user groups: Tourists, Safari Drivers, and Park Authorities through a unified digital ecosystem. The system consists of a Tourist Web Application, Driver Mobile Application, and Authority Administrative Dashboard. Tourists can explore wildlife information, discover verified safari drivers, book safari vehicles, view wildlife sightings, and communicate with drivers. Drivers can manage bookings, navigate safari routes using real-time GPS tracking, record wildlife sightings with GPS coordinates, communicate with tourists, and send emergency SOS alerts. Park authorities can monitor live safari operations through a GIS-based administrative dashboard, track active safari jeeps, manage driver information, monitor wildlife sightings, handle emergency incidents, manage restricted zones, and analyze tourist and operational data. The project uses a Node.js and Express REST API with Supabase PostgreSQL, JWT-based authentication, Leaflet/OpenStreetMap for GIS mapping, and notification services.",
+    image: projectImg15,
+    tech: [
+      "React 19",
+      "Vite",
+      "Tailwind CSS 4",
+      "Flutter",
+      "Dart",
+      "Node.js",
+      "Express.js",
+      "Supabase",
+      "PostgreSQL",
+      "JWT",
+      "Leaflet",
+      "React-Leaflet",
+      "OpenStreetMap",
+      "OneSignal",
+      "NotifyLK",
+      "Nodemailer"
+    ],
+    category: ["University Project"],
+    displayCategory: "University Project",
+    role: "Full-Stack Developer",
+    duration: "2026",
+    features: [
+      "Multi-platform system for Tourists, Drivers, and Park Authorities",
+      "Tourist web application for safari discovery and booking",
+      "Verified safari driver directory with profiles and reviews",
+      "Safari vehicle booking and booking management",
+      "Driver mobile application for safari operations",
+      "Real-time GPS location tracking",
+      "S2R intelligent safari route optimization",
+      "GPS-based wildlife sighting reporting",
+      "Live wildlife sighting monitoring",
+      "Authority GIS dashboard with interactive maps",
+      "Active safari jeep monitoring",
+      "Driver verification and management",
+      "Geofence and restricted-zone monitoring",
+      "Emergency SOS alerts with vehicle location",
+      "Tourist-driver communication",
+      "Tourist analytics and reports",
+      "Revenue and operational tracking",
+      "JWT-based role-based authentication",
+      "OTP-based authentication and verification",
+      "Push and email notifications",
+      "Supabase PostgreSQL database and storage",
+      "Leaflet and OpenStreetMap GIS integration",
+      "Responsive modern user interfaces"
+    ],
+    highlights: "Developed as a university project to create a complete digital ecosystem for wildlife safari management in Sri Lanka. The system integrates a Tourist Web Application, Driver Mobile Application, and Authority Dashboard using React, Flutter, Node.js, Express, Supabase, GIS mapping, GPS tracking, and intelligent route optimization. Key capabilities include safari booking, real-time vehicle tracking, wildlife sighting reporting, S2R route optimization, geofencing, emergency SOS alerts, driver verification, communication, analytics, and operational monitoring.",
+    demo: "https://guide-lanka-tourist.vercel.app/",
+    code: "https://github.com/umindudinal/GuideLanka-System.git"
+  },
   {
     id: "ape-bass",
     title: "Home Services Marketplace Mobile App (Ape Bass)",

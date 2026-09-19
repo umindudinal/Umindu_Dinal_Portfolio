@@ -16,15 +16,12 @@ const Work = () => {
   return (
     <section 
       id='experience'
-      className='py-24 bg-dark-100 relative overflow-hidden'
+      className='py-20 lg:py-24 bg-dark-100 relative overflow-hidden'
     >
-      <div className='container mx-auto px-6 relative z-10'>
+      <div className='container mx-auto px-6 max-w-6xl relative z-10'>
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="px-4 py-1.5 rounded-full glass-panel border-purple/30 text-purple text-xs font-semibold uppercase tracking-wider mb-3 inline-block">
-            Career & Education
-          </span>
           <h2 className='text-3xl sm:text-4xl font-extrabold text-white mb-4'>
             Experience & <span className='text-gradient'>Education</span>
           </h2>

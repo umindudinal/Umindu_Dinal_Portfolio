@@ -50,20 +50,16 @@ const Contact = () => {
   return (
     <section 
       id='contact'
-      className='py-24 bg-dark-200 relative overflow-hidden'
+      className='py-20 lg:py-24 bg-dark-200 relative overflow-hidden'
     >
       {/* Ambient background glow */}
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-purple/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-96 h-96 bg-pink/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className='container mx-auto px-6 relative z-10'>
+      <div className='container mx-auto px-6 max-w-6xl relative z-10'>
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border-emerald-500/40 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Available for Hire & Collaboration
-          </div>
           <h2 className='text-3xl sm:text-4xl font-extrabold text-white mb-4'>
             Get in <span className='text-gradient'>Touch</span>
           </h2>
